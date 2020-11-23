@@ -2,12 +2,13 @@
 <html lang="en">
 
 <head>
-	<title>Home - ERM Technology</title>
+	<title>Home - {{$setting->site_name}}</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta charset="utf-8">
 	<meta name="author" content="Intprism Technology, info@intprism.com">
 	<meta name="keywords" content="Disini keyword untuk seo" />
 	<meta name="description" content="Disini description biar tampil di search engine bagus">
+	<link rel="shortcut icon" href="newcatalog/images/logo.png" type="image/x-icon">
 	<script>
 		addEventListener("load", function () {
 			setTimeout(hideURLbar, 0);
@@ -1224,7 +1225,7 @@
 							</div>
 
 							<h4 class="sub-tittle-w3layouts my-lg-4 my-3">Satisfaction Guaranteed</h4>
-							<p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</p>
+							<p>Garansi pelayanan dan produk terbaik dari ERM Technology.</p>
 							<p>
 								<a href="shop.html" class="btn btn-sm animated-button gibson-three mt-4">Shop Now</a>
 							</p>
@@ -1236,7 +1237,7 @@
 							</div>
 
 							<h4 class="sub-tittle-w3layouts my-lg-4 my-3">Fast Shipping</h4>
-							<p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</p>
+							<p>Proses pengemasan dan pengiriman cepat sesuai harapan anda.</p>
 							<p>
 								<a href="shop.html" class="btn btn-sm animated-button gibson-three mt-4">Shop Now</a>
 							</p>
@@ -1244,11 +1245,11 @@
 						<!-- /.col-lg-4 -->
 						<div class="col-lg-4 bottom-sub-grid text-center">
 							<div class="bt-icon">
-								<span class="far fa-sun"></span>
+								<span class="far fa-envelope-o"></span>
 							</div>
 
-							<h4 class="sub-tittle-w3layouts my-lg-4 my-3">UV Protection</h4>
-							<p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</p>
+							<h4 class="sub-tittle-w3layouts my-lg-4 my-3">Subscribe Disc</h4>
+							<p>Langganan newsletter untuk diskon dan penawaran menarik dari ERM Technology.</p>
 							<p>
 								<a href="shop.html" class="btn btn-sm animated-button gibson-three mt-4">Shop Now</a>
 							</p>
@@ -1266,7 +1267,7 @@
 							</div>
 							<div class="mail-grid-text-info">
 								<h3>Genuine Product</h3>
-								<p>Lorem ipsum dolor sit amet, consectetur</p>
+								<p>Temukan produk asli berkualitas.</p>
 							</div>
 						</div>
 						<div class="col-lg-3 footer-top-w3layouts-grid-sec">
@@ -1274,8 +1275,8 @@
 								<i class="fas fa-shield-alt"></i>
 							</div>
 							<div class="mail-grid-text-info">
-								<h3>Secure Products</h3>
-								<p>Lorem ipsum dolor sit amet, consectetur</p>
+								<h3>Quality Products</h3>
+								<p>Produk terjamin berkualitas.</p>
 							</div>
 						</div>
 						<div class="col-lg-3 footer-top-w3layouts-grid-sec">
@@ -1284,7 +1285,7 @@
 							</div>
 							<div class="mail-grid-text-info">
 								<h3>Cash on Delivery</h3>
-								<p>Lorem ipsum dolor sit amet, consectetur</p>
+								<p>Pembayaran sesuai yang anda inginkan.</p>
 							</div>
 						</div>
 						<div class="col-lg-3 footer-top-w3layouts-grid-sec">
@@ -1293,7 +1294,7 @@
 							</div>
 							<div class="mail-grid-text-info">
 								<h3>Easy Delivery</h3>
-								<p>Lorem ipsum dolor sit amet, consectetur</p>
+								<p>Katalog sesuai? kami antar ke lokasi anda!</p>
 							</div>
 						</div>
 					</div>
@@ -1355,12 +1356,12 @@
 					</div>
 					<div class="contact-info">
 						<h4>Location :</h4>
-						<p>0926k 4th block building, king Avenue, New York City.</p>
+						<p>{{ $setting->address }}</p>
 						<div class="phone">
 							<h4>Contact :</h4>
-							<p>Phone : +121 098 8907 9987</p>
+							<p>Phone : {{ $setting->contact_number }}</p>
 							<p>Email :
-								<a href="mailto:info@example.com">info@example.com</a>
+								<a href="mailto:{{ $setting->contact_email }}">{{ $setting->contact_email }}</a>
 							</p>
 						</div>
 					</div>
@@ -1371,7 +1372,7 @@
 					</div>
 					<ul class="links">
 						<li>
-							<a href="index.html">Home</a>
+							<a href="/">Home</a>
 						</li>
 						<li>
 							<a href="about.html">About</a>
@@ -1389,7 +1390,7 @@
 				</div>
 				<div class="col-lg-3 footer-grid-w3ls">
 					<div class="footer-title">
-						<h3>Sign up for your offers</h3>
+						<h3>Subscribe for your offers</h3>
 					</div>
 					<div class="footer-text">
 						<p>By subscribing to our mailing list you will always get latest news and updates from us.</p>
@@ -1404,7 +1405,7 @@
 				</div>
 			</div>
 			<div class="copyright-w3layouts mt-4">
-				<p class="copy-right text-center ">&copy; <a href="/">2018 ERM Technology</a>. All Rights Reserved
+				<p class="copy-right text-center ">&copy; <a href="/">2018 {{$setting->site_name}}</a>. All Rights Reserved
 					<!-- Developer Company -->
 					<a href="https://bikinkode.com/" style="display:none;"> Develop By: Bikin Kode Indonesia </a>
 					<a href="https://intprism.com/" style="display:none;"> Develop By: Intprism Technology </a>
@@ -1416,7 +1417,7 @@
 	<!-- //footer -->
 
 	<!--jQuery-->
-	<script src="js/jquery-2.2.3.min.js"></script>
+	<script src="newcatalog/js/jquery-2.2.3.min.js"></script>
 	<!-- newsletter modal -->
 	<!-- Modal -->
 	<!-- Modal -->

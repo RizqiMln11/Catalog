@@ -25,9 +25,10 @@ class FrontEndController extends Controller
         $setting = Setting::all();
         $limit = Post::orderBy('created_at', 'desc')->first();
         $full = Category::orderBy('created_at', 'asc')->take(3)->get();
+        $catAll = Category::orderBy('created_at', 'asc')->take(10)->get();
         $pst = Post::orderBy('created_at', 'desc')->take(5)->get();
-        $sixthpost = Post::orderBy('created_at', 'desc')->take(5)->get();
-        return view('index2', compact('post', $post, 'limit', $limit, $full, 'full', $pst, 'pst', $sixthpost, 'sixthpost'))
+        $sixthpost = Post::orderBy('created_at', 'desc')->take(10)->get();
+        return view('index2', compact('post', $post, 'limit', $limit, $full, 'full', $pst, 'pst', $sixthpost, 'sixthpost', 'catAll', $catAll))
                     ->with('profile', Profile::first())
                     ->with('setting', Setting::first())
                     ->with('title', Setting::first()->site_name)
