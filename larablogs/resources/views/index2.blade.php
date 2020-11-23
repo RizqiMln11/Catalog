@@ -1,19 +1,13 @@
-<!--
-	Author: W3layouts
-	Author URL: http://w3layouts.com
-	License: Creative Commons Attribution 3.0 Unported
-	License URL: http://creativecommons.org/licenses/by/3.0/
--->
-
 <!DOCTYPE html>
-<html lang="zxx">
+<html lang="en">
 
 <head>
-	<title>Goggles Ecommerce Category Bootstrap responsive Web Template | Home :: w3layouts</title>
+	<title>Home - ERM Technology</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta charset="utf-8">
-	<meta name="keywords" content="Goggles a Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
-Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+	<meta name="author" content="Intprism Technology, info@intprism.com">
+	<meta name="keywords" content="Disini keyword untuk seo" />
+	<meta name="description" content="Disini description biar tampil di search engine bagus">
 	<script>
 		addEventListener("load", function () {
 			setTimeout(hideURLbar, 0);
@@ -109,7 +103,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						<div class="product-googles-info googles">
 							<div class="men-pro-item">
 								<div class="men-thumb-item">
-									<img src="images/s1.jpg" class="img-fluid" alt="">
+									<img src="newcatalog/images/s1.jpg" class="img-fluid" alt="">
 									<div class="men-cart-pro">
 										<div class="inner-men-cart-pro">
 											<a href="single.html" class="link-product-add-cart">Quick View</a>
@@ -180,7 +174,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						<div class="product-googles-info googles">
 							<div class="men-pro-item">
 								<div class="men-thumb-item">
-									<img src="images/s2.jpg" class="img-fluid" alt="">
+									<img src="newcatalog/images/s2.jpg" class="img-fluid" alt="">
 									<div class="men-cart-pro">
 										<div class="inner-men-cart-pro">
 											<a href="single.html" class="link-product-add-cart">Quick View</a>
@@ -400,7 +394,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						<div class="product-googles-info googles">
 							<div class="men-pro-item">
 								<div class="men-thumb-item">
-									<img src="images/m1.jpg" class="img-fluid" alt="">
+									<img src="newcatalog/images/m1.jpg" class="img-fluid" alt="">
 									<div class="men-cart-pro">
 										<div class="inner-men-cart-pro">
 											<a href="single.html" class="link-product-add-cart">Quick View</a>
@@ -471,7 +465,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						<div class="product-googles-info googles">
 							<div class="men-pro-item">
 								<div class="men-thumb-item">
-									<img src="images/m2.jpg" class="img-fluid" alt="">
+									<img src="newcatalog/images/m2.jpg" class="img-fluid" alt="">
 									<div class="men-cart-pro">
 										<div class="inner-men-cart-pro">
 											<a href="single.html" class="link-product-add-cart">Quick View</a>
@@ -542,7 +536,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						<div class="product-googles-info googles">
 							<div class="men-pro-item">
 								<div class="men-thumb-item">
-									<img src="images/m3.jpg" class="img-fluid" alt="">
+									<img src="newcatalog/images/m3.jpg" class="img-fluid" alt="">
 									<div class="men-cart-pro">
 										<div class="inner-men-cart-pro">
 											<a href="single.html" class="link-product-add-cart">Quick View</a>
@@ -613,7 +607,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						<div class="product-googles-info googles">
 							<div class="men-pro-item">
 								<div class="men-thumb-item">
-									<img src="images/m4.jpg" class="img-fluid" alt="">
+									<img src="newcatalog/images/m4.jpg" class="img-fluid" alt="">
 									<div class="men-cart-pro">
 										<div class="inner-men-cart-pro">
 											<a href="single.html" class="link-product-add-cart">Quick View</a>
@@ -705,7 +699,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 										<div class="product-googles-info slide-img googles">
 											<div class="men-pro-item">
 												<div class="men-thumb-item">
-													<img src="images/s5.jpg" class="img-fluid" alt="">
+													<img src="newcatalog/images/s5.jpg" class="img-fluid" alt="">
 													<div class="men-cart-pro">
 														<div class="inner-men-cart-pro">
 															<a href="single.html" class="link-product-add-cart">Quick View</a>
@@ -779,7 +773,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 										<div class="product-googles-info slide-img googles">
 											<div class="men-pro-item">
 												<div class="men-thumb-item">
-													<img src="images/s6.jpg" class="img-fluid" alt="">
+													<img src="newcatalog/images/s6.jpg" class="img-fluid" alt="">
 													<div class="men-cart-pro">
 														<div class="inner-men-cart-pro">
 															<a href="single.html" class="link-product-add-cart">Quick View</a>
@@ -853,7 +847,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 										<div class="product-googles-info slide-img googles">
 											<div class="men-pro-item">
 												<div class="men-thumb-item">
-													<img src="images/s7.jpg" class="img-fluid" alt="">
+													<img src="newcatalog/images/s7.jpg" class="img-fluid" alt="">
 													<div class="men-cart-pro">
 														<div class="inner-men-cart-pro">
 															<a href="single.html" class="link-product-add-cart">Quick View</a>
@@ -927,7 +921,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 										<div class="product-googles-info slide-img googles">
 											<div class="men-pro-item">
 												<div class="men-thumb-item">
-													<img src="images/s8.jpg" class="img-fluid" alt="">
+													<img src="newcatalog/images/s8.jpg" class="img-fluid" alt="">
 													<div class="men-cart-pro">
 														<div class="inner-men-cart-pro">
 															<a href="single.html" class="link-product-add-cart">Quick View</a>
@@ -1001,7 +995,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 										<div class="product-googles-info slide-img googles">
 											<div class="men-pro-item">
 												<div class="men-thumb-item">
-													<img src="images/s9.jpg" class="img-fluid" alt="">
+													<img src="newcatalog/images/s9.jpg" class="img-fluid" alt="">
 													<div class="men-cart-pro">
 														<div class="inner-men-cart-pro">
 															<a href="single.html" class="link-product-add-cart">Quick View</a>
@@ -1075,7 +1069,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 										<div class="product-googles-info slide-img googles">
 											<div class="men-pro-item">
 												<div class="men-thumb-item">
-													<img src="images/s10.jpg" class="img-fluid" alt="">
+													<img src="newcatalog/images/s10.jpg" class="img-fluid" alt="">
 													<div class="men-cart-pro">
 														<div class="inner-men-cart-pro">
 															<a href="single.html" class="link-product-add-cart">Quick View</a>
@@ -1199,7 +1193,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				<div class="row galsses-grids pt-lg-5 pt-3">
 					<div class="col-lg-6 galsses-grid-left">
 						<figure class="effect-lexi">
-							<img src="images/banner4.jpg" alt="" class="img-fluid">
+							<img src="newcatalog/images/banner4.jpg" alt="" class="img-fluid">
 							<figcaption>
 								<h3>Editor's
 									<span>Pick</span>
@@ -1210,7 +1204,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					</div>
 					<div class="col-lg-6 galsses-grid-left">
 						<figure class="effect-lexi">
-							<img src="images/banner1.jpg" alt="" class="img-fluid">
+							<img src="newcatalog/images/banner1.jpg" alt="" class="img-fluid">
 							<figcaption>
 								<h3>Editor's
 									<span>Pick</span>
@@ -1410,8 +1404,11 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				</div>
 			</div>
 			<div class="copyright-w3layouts mt-4">
-				<p class="copy-right text-center ">&copy; 2018 Goggles. All Rights Reserved | Design by
-					<a href="http://w3layouts.com/"> W3layouts </a>
+				<p class="copy-right text-center ">&copy; <a href="/">2018 ERM Technology</a>. All Rights Reserved
+					<!-- Developer Company -->
+					<a href="https://bikinkode.com/" style="display:none;"> Develop By: Bikin Kode Indonesia </a>
+					<a href="https://intprism.com/" style="display:none;"> Develop By: Intprism Technology </a>
+					<!-- END Developer Company -->
 				</p>
 			</div>
 		</div>
