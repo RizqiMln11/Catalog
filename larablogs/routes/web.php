@@ -70,13 +70,49 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function(){
 	'uses' => 'PostController@create',
 
 	'as' => 'post.create'
-     ]);
+	 ]);
+	 
+	Route::get('/price/create', [
+		'uses' => 'PostController@createprice',
+	
+		'as' => 'price.create'
+		 ]);
+
+	Route::get('/price/list', [
+	'uses' => 'PostController@listprice',
+
+	'as' => 'price.list'
+		]);
 
 	Route::post('/post/store', [
 		'uses' => 'PostController@store',
 
 		'as' => 'post.store'
 	]);
+	Route::post('/price/store', [
+		'uses' => 'PostController@storePrice',
+
+		'as' => 'price.store'
+	]);
+
+	Route::get('/price/edit/{id}', [
+		'uses' => 'postController@editprice',
+	
+		'as' => 'price.edit'
+		]);	
+
+		
+	Route::post('/price/update/{id}', [
+		'uses' => 'postController@updateprice',
+	
+		'as' => 'price.update'
+		]);
+
+	Route::get('/price/delete/{id}', [
+		'uses' => 'postController@destroyprice',
+
+		'as' => 'price.delete'
+		]);
 
 
 

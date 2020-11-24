@@ -86,58 +86,64 @@
                     <ul class="list-group">
 
                          <li class="list-group-item"> 
-                        <a href="{{ route('home') }}"> Home</a>
+                        <a href="{{ route('home') }}"> Dashoard</a>
                         </li>
 
                         <li class="list-group-item"> 
-                        <a href="{{ route('categories') }}"> Categories</a>
+                        <a href="{{ route('categories') }}"> Lihat Category</a>
+                        </li>
+                        <li class="list-group-item"> 
+                        <a href="{{ route('price.list') }}"> Lihat Daftar Harga</a>
                         </li>
 
                         <li class="list-group-item"> 
-                        <a href="{{ route('tags') }}"> Tags</a>
+                        <a href="{{ route('tags') }}"> Lihat Tags</a>
                         </li>
 
                         <li class="list-group-item"> 
-                        <a href=" {{ route('user.profile') }} "> My Profile</a>
+                        <a href=" {{ route('user.profile') }} ">Profile Perusahaan</a>
                         </li>
 
                         <li class="list-group-item"> 
-                        <a href="{{ route('posts') }}"> View Post </a>
+                        <a href="{{ route('posts') }}"> Lihat Publish Post </a>
                         </li>
 
                         <li class="list-group-item"> 
-                        <a href="{{ route('posts.trashed') }}"> View Posts Trashed </a>
+                        <a href="{{ route('posts.trashed') }}"> Lihat Arsip Post </a>
                         </li>
 
 
                         @if(Auth::user()->admin)
 
                         <li class="list-group-item"> 
-                        <a href="{{ route('users') }}"> Users</a>
+                        <a href="{{ route('users') }}"> Pengguna</a>
                         </li>
 
                         <li class="list-group-item"> 
-                        <a href=" {{ route('user.create') }} "> Create New User</a>
+                        <a href=" {{ route('user.create') }} "> Tambahkan Pengguna Baru</a>
                         </li>
 
                         @endif
 
                         <li class="list-group-item"> 
-                        <a href=" {{ route('post.create') }} "> Create New Post</a>
-                        </li>
-
-
-                        <li class="list-group-item"> 
-                        <a href="{{ route('category.create') }}"> Create New the Category</a>
+                        <a href=" {{ route('post.create') }} "> Tambahkan Post Baru</a>
                         </li>
 
                         <li class="list-group-item"> 
-                        <a href="{{ route('tag.create') }}"> Create New Tag</a>
+                        <a href=" {{ route('price.create') }} "> Tambahkan Harga Barang</a>
+                        </li>
+
+                        <li class="list-group-item"> 
+                        <a href="{{ route('category.create') }}">Tambahkan Category Baru</a>
+                        </li>
+
+                        <li class="list-group-item"> 
+                        <a href="{{ route('tag.create') }}"> Tambahkan Tag Baru</a>
                         </li>
 
                        @if(Auth::user()->admin)
                          <li class="list-group-item"> 
-                            <a href=" {{ route('settings') }} "> Settings </a>
+                            <a href=" {{ route('settings') }} "> Informasi Setting </a>
                         </li>
                        @endif
 

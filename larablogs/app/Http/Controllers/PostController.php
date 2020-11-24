@@ -9,6 +9,7 @@ use App\Tag;
 use Session;
 use App\Post;
 use App\category;
+use App\price;
 use Illuminate\Http\Request;
 
 class PostController extends Controller
@@ -25,6 +26,29 @@ class PostController extends Controller
         return view('admin.posts.index', compact('posts', $posts) );
     }
 
+    public function storePrice(Request $request)
+    {
+        // dd($request->tags);
+
+        $this->validate($request, [
+            'harga_normal' => 'required',
+            'harga_diskon' => 'required',
+
+        ]);
+
+
+        $post = price::create([
+            'harga_normal' => $request->harga_normal,
+            'harga_diskon' => $request->harga_diskon,
+        ]);
+
+        
+        if($post){
+            Session::flash('succes', 'Price Creates Succesfully');
+        }
+
+        return redirect()->route('price.list');
+    }
     /**
      * Show the form for creating a new resource.
      *
@@ -45,6 +69,49 @@ class PostController extends Controller
                                          ->with('tags', $tags);
     }
 
+    public function createprice()
+    {
+        return view('admin.posts.createprice');
+    }
+    
+    public function listprice()
+    {
+        $prices = price::all();
+        return view('admin.posts.pricelist', compact('prices', $prices));
+    }
+
+    public function editprice($id)
+    {
+        $prices = price::find($id);
+
+
+        return view('admin.posts.editprice')->with('prices', $prices);
+    }
+
+    public function updateprice(Request $request, $id)
+    {
+        $price = price::find($id);
+
+        $price->harga_normal = $request->harga_normal;
+        $price->harga_diskon = $request->harga_diskon;
+
+        $price->save();
+
+        Session::flash('success', 'Price Update!');
+
+        return redirect()->route('price.list');
+
+    }
+    public function destroyprice($id)
+    {
+        $price = price::find($id);
+
+        $price->delete();
+
+        Session::flash('success', 'Berhasil di hapus');
+
+        return redirect()->back();
+    }
     /**
      * Store a newly created resource in storage.
      *
@@ -85,7 +152,6 @@ class PostController extends Controller
 
         return redirect()->route('posts');
     }
-
     /**
      * Display the specified resource.
      *
