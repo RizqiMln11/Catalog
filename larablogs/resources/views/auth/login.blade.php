@@ -1,127 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <title>Login V18</title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-<!--===============================================================================================-->  
-    <link rel="icon" type="image/png" href="{{ asset('necs/images/icons/favicon.ico')}}"/>
-<!--===============================================================================================-->
-    <link rel="stylesheet" type="text/css" href="{{ asset('necs/vendor/bootstrap/css/bootstrap.min.css')}}">
-<!--===============================================================================================-->
-    <link rel="stylesheet" type="text/css" href="{{ asset('necs/fonts/font-awesome-4.7.0/css/font-awesome.min.css')}}">
-<!--===============================================================================================-->
-    <link rel="stylesheet" type="text/css" href="{{ asset('necs/fonts/Linearicons-Free-v1.0.0/icon-font.min.css')}}">
-<!--===============================================================================================-->
-    <link rel="stylesheet" type="text/css" href="{{ asset('necs/vendor/animate/animate.css')}}">
-<!--===============================================================================================-->  
-    <link rel="stylesheet" type="text/css" href="{{ asset('necs/vendor/css-hamburgers/hamburgers.min.css')}}">
-<!--===============================================================================================-->
-    <link rel="stylesheet" type="text/css" href="{{ asset('necs/vendor/animsition/css/animsition.min.css')}}">
-<!--===============================================================================================-->
-    <link rel="stylesheet" type="text/css" href="{{ asset('necs/vendor/select2/select2.min.css')}}">
-<!--===============================================================================================-->  
-    <link rel="stylesheet" type="text/css" href="{{ asset('necs/vendor/daterangepicker/daterangepicker.css')}}">
-<!--===============================================================================================-->
-    <link rel="stylesheet" type="text/css" href="{{ asset('necs/css/util.css')}}">
-    <link rel="stylesheet" type="text/css" href="{{ asset('necs/css/main.css')}}">
-<!--===============================================================================================-->
-</head>
-<body style="background-color: #666666;">
-    
-    <div class="limiter">
-        <div class="container-login100">
-            <div class="wrap-login100">
-                <form class="login100-form validate-form" method="POST" action="{{ route('login') }}">
+    <head>
+        <meta charset="utf-8" />
+        <title>ERM - Technology Login</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta content="A fully featured admin theme which can be used to build CRM, CMS, etc." name="description" />
+        <meta content="Coderthemes" name="author" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <!-- App favicon -->
+        <link rel="shortcut icon" href="{{ asset('newloginatribute/images/favicon.ico')}}">
 
-                    @csrf
+        <!-- App css -->
+        <link href="{{ asset('newloginatribute/css/bootstrap.min.css')}}" rel="stylesheet" type="text/css" />
+        <link href="{{ asset('newloginatribute/css/icons.min.css')}}" rel="stylesheet" type="text/css" />
+        <link href="{{ asset('newloginatribute/css/app.min.css')}}" rel="stylesheet" type="text/css" />
 
-                    <span class="login100-form-title p-b-43">
-                        {{ __('Login') }}
-                    </span>
-                    
-                    
-                    <div class="wrap-input100 validate-input" data-validate = "Valid email is required: ex@abc.xyz">
-                        <input class="input100{{ $errors->has('email') ? ' is-invalid' : '' }}" type="email" name="email" placeholder="Email">
-                         @if ($errors->has('email'))
-                            <span class="focus-input100">{{ $errors->first('email') }}</span>
-                        @endif
-                    </div>
-                    
-                    
-                    <div class="wrap-input100 validate-input" data-validate="Password is required">
-                        <input class="input100{{ $errors->has('password') ? ' is-invalid' : '' }}" type="password" name="password" placeholder="Password">
-                        @if ($errors->has('password'))
-                             <span class="focus-input100">{{ $errors->first('password') }}</span>
-                        @endif
-                    </div>
+    </head>
 
+    <body class="authentication-bg authentication-bg-pattern d-flex align-items-center">
 
-                    <div class="flex-sb-m w-full p-t-3 p-b-32">
-                        <div class="contact100-form-checkbox">
-                            <input class="input-checkbox100" id="ckb1" type="checkbox" name="remember-me" {{ old('remember') ? 'checked' : '' }}>
-                            <label class="label-checkbox100" for="ckb1">
-                                Remember me
-                            </label>
-                        </div>
-
-                        <div>
-                            <a href="{{ route('password.request') }}" class="txt1">
-                                Forgot Password?
-                            </a>
-                        </div>
-                    </div>
-            
-
-                    <div class="container-login100-form-btn">
-                        <button class="login100-form-btn">
-                           {{ __('Login') }}
-                        </button>
-                    </div>
-                    
-                    <div class="text-center p-t-46 p-b-20">
-                        <span class="txt2">
-                            or sign up using
-                        </span>
-                    </div>
-
-                    <div class="login100-form-social flex-c-m">
-                        <a href="#" class="login100-form-social-item flex-c-m bg1 m-r-5">
-                            <i class="fa fa-facebook-f" aria-hidden="true"></i>
-                        </a>
-
-                        <a href="#" class="login100-form-social-item flex-c-m bg2 m-r-5">
-                            <i class="fa fa-twitter" aria-hidden="true"></i>
-                        </a>
-                    </div>
-                </form>
-
-                <div class="login100-more" style="background-image: url('{{ asset('necs/images/bg-01.jpg')}}');">
-                </div>
-            </div>
+        <div class="home-btn d-none d-sm-block">
+            <a href="index.html"><i class="fas fa-home h2 text-white"></i></a>
         </div>
-    </div>
-    
-    
+        
+        <div class="account-pages w-100 mt-5 mb-5">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-md-8 col-lg-6 col-xl-5">
+                        <div class="card">
 
-    
-    
-<!--===============================================================================================-->
-    <script src="{{ asset('necs/vendor/jquery/jquery-3.2.1.min.js')}}"></script>
-<!--===============================================================================================-->
-    <script src="{{ asset('necs/vendor/animsition/js/animsition.min.js')}}"></script>
-<!--===============================================================================================-->
-    <script src="{{ asset('necs/vendor/bootstrap/js/popper.js')}}"></script>
-    <script src="{{ asset('necs/vendor/bootstrap/js/bootstrap.min.js')}}"></script>
-<!--===============================================================================================-->
-    <script src="{{ asset('necs/vendor/select2/select2.min.js')}}"></script>
-<!--===============================================================================================-->
-    <script src="{{ asset('necs/vendor/daterangepicker/moment.min.js')}}"></script>
-    <script src="{{ asset('necs/vendor/daterangepicker/daterangepicker.js')}}"></script>
-<!--===============================================================================================-->
-    <script src="{{ asset('necs/vendor/countdowntime/countdowntime.js')}}"></script>
-<!--===============================================================================================-->
-    <script src="{{ asset('necs/js/main.js')}}"></script>
+                            <div class="card-body p-4">
+                                
+                                <div class="text-center mb-4">
+                                    <a href="index.html">
+                                        <span><img src="{{ asset('newloginatribute/images/logo-dark.png')}}" alt="" height="28"></span>
+                                    </a>
+                                </div>
 
-</body>
+                                <form method="POST" action="{{ route('login') }}" class="pt-2">
+                                    @csrf
+                                    <div class="form-group mb-3">
+                                        <label for="emailaddress">Email address</label>
+                                        <input class="form-control {{ $errors->has('email') ? ' is-invalid' : '' }}" type="email" name="email" id="emailaddress" required="" placeholder="Enter your email">
+                                    </div>
+
+                                    <div class="form-group mb-3">
+                                        <a href="{{ route('password.request') }}" class="text-muted float-right"><small>Forgot your password?</small></a>
+                                        <label for="password">Password</label>
+                                        <input class="form-control {{ $errors->has('password') ? ' is-invalid' : '' }}" type="password" name="password" required="" id="password" placeholder="Enter your password">
+                                    </div>
+
+                                    <div class="custom-control custom-checkbox mb-3">
+                                        <input type="checkbox" class="custom-control-input" name="remember-me" id="checkbox-signin"  {{ old('remember') ? 'checked' : '' }}>
+                                        <label class="custom-control-label" for="checkbox-signin">Remember me</label>
+                                    </div>
+
+                                    <div class="form-group mb-0 text-center">
+                                        <button class="btn btn-success btn-block" type="submit"> {{ __('Login') }} </button>
+                                    </div>
+
+                                </form>
+
+                                <div class="row mt-3">
+                                    <div class="col-12 text-center">
+                                        <p class="text-muted mb-0">Don't have an account? <a href="#" class="text-dark ml-1"><b>Sign Up</b></a></p>
+                                    </div> <!-- end col -->
+                                </div>
+                                <!-- end row -->
+
+                            </div> <!-- end card-body -->
+                        </div>
+                        <!-- end card -->
+
+                    </div> <!-- end col -->
+                </div>
+                <!-- end row -->
+            </div>
+            <!-- end container -->
+        </div>
+        <!-- end page -->
+        
+
+        <!-- Vendor js -->
+        <script src="{{ asset('newloginatribute/js/vendor.min.js')}}"></script>
+
+        <!-- App js -->
+        <script src="{{ asset('newloginatribute/js/app.min.js')}}"></script>
+        
+    </body>
 </html>
