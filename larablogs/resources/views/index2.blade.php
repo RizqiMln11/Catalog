@@ -1,19 +1,14 @@
-<!--
-	Author: W3layouts
-	Author URL: http://w3layouts.com
-	License: Creative Commons Attribution 3.0 Unported
-	License URL: http://creativecommons.org/licenses/by/3.0/
--->
-
 <!DOCTYPE html>
-<html lang="zxx">
+<html lang="en">
 
 <head>
-	<title>ERM - Technology</title>
+	<title>Home - {{$setting->site_name}}</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta charset="utf-8">
-	<meta name="keywords" content="Goggles a Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
-Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+	<meta name="author" content="Intprism Technology, info@intprism.com">
+	<meta name="keywords" content="Disini keyword untuk seo" />
+	<meta name="description" content="Disini description biar tampil di search engine bagus">
+	<link rel="shortcut icon" href="newcatalog/images/logo.png" type="image/x-icon">
 	<script>
 		addEventListener("load", function () {
 			setTimeout(hideURLbar, 0);
@@ -109,7 +104,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						<div class="product-googles-info googles">
 							<div class="men-pro-item">
 								<div class="men-thumb-item">
-									<img src="images/s1.jpg" class="img-fluid" alt="">
+									<img src="newcatalog/images/s1.jpg" class="img-fluid" alt="">
 									<div class="men-cart-pro">
 										<div class="inner-men-cart-pro">
 											<a href="single.html" class="link-product-add-cart">Quick View</a>
@@ -180,7 +175,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						<div class="product-googles-info googles">
 							<div class="men-pro-item">
 								<div class="men-thumb-item">
-									<img src="images/s2.jpg" class="img-fluid" alt="">
+									<img src="newcatalog/images/s2.jpg" class="img-fluid" alt="">
 									<div class="men-cart-pro">
 										<div class="inner-men-cart-pro">
 											<a href="single.html" class="link-product-add-cart">Quick View</a>
@@ -400,7 +395,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						<div class="product-googles-info googles">
 							<div class="men-pro-item">
 								<div class="men-thumb-item">
-									<img src="images/m1.jpg" class="img-fluid" alt="">
+									<img src="newcatalog/images/m1.jpg" class="img-fluid" alt="">
 									<div class="men-cart-pro">
 										<div class="inner-men-cart-pro">
 											<a href="single.html" class="link-product-add-cart">Quick View</a>
@@ -471,7 +466,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						<div class="product-googles-info googles">
 							<div class="men-pro-item">
 								<div class="men-thumb-item">
-									<img src="images/m2.jpg" class="img-fluid" alt="">
+									<img src="newcatalog/images/m2.jpg" class="img-fluid" alt="">
 									<div class="men-cart-pro">
 										<div class="inner-men-cart-pro">
 											<a href="single.html" class="link-product-add-cart">Quick View</a>
@@ -542,7 +537,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						<div class="product-googles-info googles">
 							<div class="men-pro-item">
 								<div class="men-thumb-item">
-									<img src="images/m3.jpg" class="img-fluid" alt="">
+									<img src="newcatalog/images/m3.jpg" class="img-fluid" alt="">
 									<div class="men-cart-pro">
 										<div class="inner-men-cart-pro">
 											<a href="single.html" class="link-product-add-cart">Quick View</a>
@@ -613,7 +608,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						<div class="product-googles-info googles">
 							<div class="men-pro-item">
 								<div class="men-thumb-item">
-									<img src="images/m4.jpg" class="img-fluid" alt="">
+									<img src="newcatalog/images/m4.jpg" class="img-fluid" alt="">
 									<div class="men-cart-pro">
 										<div class="inner-men-cart-pro">
 											<a href="single.html" class="link-product-add-cart">Quick View</a>
@@ -705,7 +700,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 										<div class="product-googles-info slide-img googles">
 											<div class="men-pro-item">
 												<div class="men-thumb-item">
-													<img src="images/s5.jpg" class="img-fluid" alt="">
+													<img src="newcatalog/images/s5.jpg" class="img-fluid" alt="">
 													<div class="men-cart-pro">
 														<div class="inner-men-cart-pro">
 															<a href="single.html" class="link-product-add-cart">Quick View</a>
@@ -779,7 +774,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 										<div class="product-googles-info slide-img googles">
 											<div class="men-pro-item">
 												<div class="men-thumb-item">
-													<img src="images/s6.jpg" class="img-fluid" alt="">
+													<img src="newcatalog/images/s6.jpg" class="img-fluid" alt="">
 													<div class="men-cart-pro">
 														<div class="inner-men-cart-pro">
 															<a href="single.html" class="link-product-add-cart">Quick View</a>
@@ -853,7 +848,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 										<div class="product-googles-info slide-img googles">
 											<div class="men-pro-item">
 												<div class="men-thumb-item">
-													<img src="images/s7.jpg" class="img-fluid" alt="">
+													<img src="newcatalog/images/s7.jpg" class="img-fluid" alt="">
 													<div class="men-cart-pro">
 														<div class="inner-men-cart-pro">
 															<a href="single.html" class="link-product-add-cart">Quick View</a>
@@ -927,7 +922,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 										<div class="product-googles-info slide-img googles">
 											<div class="men-pro-item">
 												<div class="men-thumb-item">
-													<img src="images/s8.jpg" class="img-fluid" alt="">
+													<img src="newcatalog/images/s8.jpg" class="img-fluid" alt="">
 													<div class="men-cart-pro">
 														<div class="inner-men-cart-pro">
 															<a href="single.html" class="link-product-add-cart">Quick View</a>
@@ -1001,7 +996,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 										<div class="product-googles-info slide-img googles">
 											<div class="men-pro-item">
 												<div class="men-thumb-item">
-													<img src="images/s9.jpg" class="img-fluid" alt="">
+													<img src="newcatalog/images/s9.jpg" class="img-fluid" alt="">
 													<div class="men-cart-pro">
 														<div class="inner-men-cart-pro">
 															<a href="single.html" class="link-product-add-cart">Quick View</a>
@@ -1075,7 +1070,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 										<div class="product-googles-info slide-img googles">
 											<div class="men-pro-item">
 												<div class="men-thumb-item">
-													<img src="images/s10.jpg" class="img-fluid" alt="">
+													<img src="newcatalog/images/s10.jpg" class="img-fluid" alt="">
 													<div class="men-cart-pro">
 														<div class="inner-men-cart-pro">
 															<a href="single.html" class="link-product-add-cart">Quick View</a>
@@ -1197,30 +1192,20 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				</div>
 				<!-- //testimonials -->
 				<div class="row galsses-grids pt-lg-5 pt-3">
+					@foreach($pstEditorPick as $postPicker)
 					<div class="col-lg-6 galsses-grid-left">
 						<figure class="effect-lexi">
-							<img src="images/banner4.jpg" alt="" class="img-fluid">
+							<img src="{{asset($postPicker->featured)}}" alt="" class="img-fluid">
 							<figcaption>
 								<h3>Editor's
 									<span>Pick</span>
 								</h3>
-								<p> Express your style now.</p>
+								@php $postPicker->title = substr($postPicker->title,0,20)." ..."; @endphp
+								<p> {{$postPicker->title}}</p>
 							</figcaption>
 						</figure>
 					</div>
-					<div class="col-lg-6 galsses-grid-left">
-						<figure class="effect-lexi">
-							<img src="images/banner1.jpg" alt="" class="img-fluid">
-							<figcaption>
-								<h3>Editor's
-									<span>Pick</span>
-								</h3>
-								<p>Express your style now.</p>
-							</figcaption>
-						</figure>
-					</div>
-				</div>
-				<!-- /grids -->
+				@endforeach
 				<div class="bottom-sub-grid-content py-lg-5 py-3">
 					<div class="row">
 						<div class="col-lg-4 bottom-sub-grid text-center">
@@ -1230,7 +1215,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 							</div>
 
 							<h4 class="sub-tittle-w3layouts my-lg-4 my-3">Satisfaction Guaranteed</h4>
-							<p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</p>
+							<p>Garansi pelayanan dan produk terbaik dari ERM Technology.</p>
 							<p>
 								<a href="shop.html" class="btn btn-sm animated-button gibson-three mt-4">Shop Now</a>
 							</p>
@@ -1242,7 +1227,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 							</div>
 
 							<h4 class="sub-tittle-w3layouts my-lg-4 my-3">Fast Shipping</h4>
-							<p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</p>
+							<p>Proses pengemasan dan pengiriman cepat sesuai harapan anda.</p>
 							<p>
 								<a href="shop.html" class="btn btn-sm animated-button gibson-three mt-4">Shop Now</a>
 							</p>
@@ -1250,11 +1235,11 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						<!-- /.col-lg-4 -->
 						<div class="col-lg-4 bottom-sub-grid text-center">
 							<div class="bt-icon">
-								<span class="far fa-sun"></span>
+								<span class="far fa-envelope-o"></span>
 							</div>
 
-							<h4 class="sub-tittle-w3layouts my-lg-4 my-3">UV Protection</h4>
-							<p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</p>
+							<h4 class="sub-tittle-w3layouts my-lg-4 my-3">Subscribe Disc</h4>
+							<p>Langganan newsletter untuk diskon dan penawaran menarik dari ERM Technology.</p>
 							<p>
 								<a href="shop.html" class="btn btn-sm animated-button gibson-three mt-4">Shop Now</a>
 							</p>
@@ -1272,7 +1257,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 							</div>
 							<div class="mail-grid-text-info">
 								<h3>Genuine Product</h3>
-								<p>Lorem ipsum dolor sit amet, consectetur</p>
+								<p>Temukan produk asli berkualitas.</p>
 							</div>
 						</div>
 						<div class="col-lg-3 footer-top-w3layouts-grid-sec">
@@ -1280,8 +1265,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 								<i class="fas fa-shield-alt"></i>
 							</div>
 							<div class="mail-grid-text-info">
-								<h3>Secure Products</h3>
-								<p>Lorem ipsum dolor sit amet, consectetur</p>
+								<h3>Quality Products</h3>
+								<p>Produk terjamin berkualitas.</p>
 							</div>
 						</div>
 						<div class="col-lg-3 footer-top-w3layouts-grid-sec">
@@ -1290,7 +1275,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 							</div>
 							<div class="mail-grid-text-info">
 								<h3>Cash on Delivery</h3>
-								<p>Lorem ipsum dolor sit amet, consectetur</p>
+								<p>Pembayaran sesuai yang anda inginkan.</p>
 							</div>
 						</div>
 						<div class="col-lg-3 footer-top-w3layouts-grid-sec">
@@ -1299,7 +1284,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 							</div>
 							<div class="mail-grid-text-info">
 								<h3>Easy Delivery</h3>
-								<p>Lorem ipsum dolor sit amet, consectetur</p>
+								<p>Katalog sesuai? kami antar ke lokasi anda!</p>
 							</div>
 						</div>
 					</div>
@@ -1310,116 +1295,11 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	</section>
 	<!-- about -->
 	<!--footer -->
-	<footer class="py-lg-5 py-3">
-		<div class="container-fluid px-lg-5 px-3">
-			<div class="row footer-top-w3layouts">
-				<div class="col-lg-3 footer-grid-w3ls">
-					<div class="footer-title">
-						<h3>About Us</h3>
-					</div>
-					<div class="footer-text">
-						<p>Curabitur non nulla sit amet nislinit tempus convallis quis ac lectus. lac inia eget consectetur sed, convallis at
-							tellus. Nulla porttitor accumsana tincidunt.</p>
-						<ul class="footer-social text-left mt-lg-4 mt-3">
-
-							<li class="mx-2">
-								<a href="#">
-									<span class="fab fa-facebook-f"></span>
-								</a>
-							</li>
-							<li class="mx-2">
-								<a href="#">
-									<span class="fab fa-twitter"></span>
-								</a>
-							</li>
-							<li class="mx-2">
-								<a href="#">
-									<span class="fab fa-google-plus-g"></span>
-								</a>
-							</li>
-							<li class="mx-2">
-								<a href="#">
-									<span class="fab fa-linkedin-in"></span>
-								</a>
-							</li>
-							<li class="mx-2">
-								<a href="#">
-									<span class="fas fa-rss"></span>
-								</a>
-							</li>
-							<li class="mx-2">
-								<a href="#">
-									<span class="fab fa-vk"></span>
-								</a>
-							</li>
-						</ul>
-					</div>
-				</div>
-				<div class="col-lg-3 footer-grid-w3ls">
-					<div class="footer-title">
-						<h3>Get in touch</h3>
-					</div>
-					<div class="contact-info">
-						<h4>Location :</h4>
-						<p>0926k 4th block building, king Avenue, New York City.</p>
-						<div class="phone">
-							<h4>Contact :</h4>
-							<p>Phone : +121 098 8907 9987</p>
-							<p>Email :
-								<a href="mailto:info@example.com">info@example.com</a>
-							</p>
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-3 footer-grid-w3ls">
-					<div class="footer-title">
-						<h3>Quick Links</h3>
-					</div>
-					<ul class="links">
-						<li>
-							<a href="index.html">Home</a>
-						</li>
-						<li>
-							<a href="about.html">About</a>
-						</li>
-						<li>
-							<a href="404.html">Error</a>
-						</li>
-						<li>
-							<a href="shop.html">Shop</a>
-						</li>
-						<li>
-							<a href="contact.html">Contact Us</a>
-						</li>
-					</ul>
-				</div>
-				<div class="col-lg-3 footer-grid-w3ls">
-					<div class="footer-title">
-						<h3>Sign up for your offers</h3>
-					</div>
-					<div class="footer-text">
-						<p>By subscribing to our mailing list you will always get latest news and updates from us.</p>
-						<form action="#" method="post">
-							<input class="form-control" type="email" name="Email" placeholder="Enter your email..." required="">
-							<button class="btn1">
-								<i class="far fa-envelope" aria-hidden="true"></i>
-							</button>
-							<div class="clearfix"> </div>
-						</form>
-					</div>
-				</div>
-			</div>
-			<div class="copyright-w3layouts mt-4">
-				<p class="copy-right text-center ">&copy; 2018 Goggles. All Rights Reserved | Design by
-					<a href="http://w3layouts.com/"> W3layouts </a>
-				</p>
-			</div>
-		</div>
-	</footer>
+	@include('includes.footer2')
 	<!-- //footer -->
 
 	<!--jQuery-->
-	<script src="js/jquery-2.2.3.min.js"></script>
+	<script src="newcatalog/js/jquery-2.2.3.min.js"></script>
 	<!-- newsletter modal -->
 	<!-- Modal -->
 	<!-- Modal -->

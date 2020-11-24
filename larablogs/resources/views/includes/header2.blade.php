@@ -10,7 +10,7 @@
         </div>
         <div class="col-md-6 logo-w3layouts text-center">
             <h1 class="logo-w3layouts">
-                <a class="navbar-brand" href="index.html">
+                <a class="navbar-brand" href="/">
                    {{$setting->site_name}} </a>
             </h1>
         </div>
@@ -97,8 +97,8 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav nav-mega mx-auto">
-                <li class="nav-item active">
-                    <a class="nav-link ml-lg-0" href="index.html">Dashboard
+                <li class="nav-item @if($_SERVER['REQUEST_URI'] == '/') active @endif">
+                    <a class="nav-link ml-lg-0" href="/">Dashboard
                         <span class="sr-only">(current)</span>
                     </a>
                 </li>
@@ -114,47 +114,50 @@
                         <li>
                             <div class="row">
                                 <div class="col-md-4 media-list span4 text-left">
-                                    <h5 class="tittle-w3layouts-sub"> Tittle goes here </h5>
+                                    <h5 class="tittle-w3layouts-sub"> Trending </h5><br>
                                     <ul>
-                                        <li class="media-mini mt-3">
-                                            <a href="shop.html">Designer Glasses</a>
-                                        </li>
+                                        @foreach ($catAll as $ctg)
                                         <li class="">
-                                            <a href="shop.html"> Ray-Ban</a>
+                                            <a href="#">{{$ctg->name}}</a>
                                         </li>
-                                        <li>
-                                            <a href="shop.html">Prescription Glasses</a>
-                                        </li>
-                                        <li class="mt-3">
-                                            <h5>View more pages</h5>
-                                        </li>
-                                        <li class="mt-2">
-                                            <a href="about.html">About</a>
-                                        </li>
-                                        <li>
-                                            <a href="customer.html">Customers</a>
-                                        </li>
+                                        @endforeach
                                     </ul>
                                 </div>
-                                <div class="col-md-4 media-list span4 text-left">
-                                    <h5 class="tittle-w3layouts-sub"> Tittle goes here </h5>
-                                    <div class="media-mini mt-3">
-                                        <a href="shop.html">
-                                            <img src="{{ asset('newcatalog/images/g2.jpg')}}" class="img-fluid" alt="">
-                                        </a>
+                                @php
+                                    $catCount = count($catAll);
+                                    $categoryRandId1 = rand(1,$catCount);
+                                    $categoryRandId2 = rand(1,$catCount);
+                                    $featuredProduct;
+                                    $startCount = 1;
+                                @endphp
+                                @foreach ($catAll as $ctg)
+                                    @if($startCount == $categoryRandId1)
+                                    <div class="col-md-4 media-list span4 text-left">
+                                        <h5 class="tittle-w3layouts-sub"> {{$ctg->name}} </h5>
+                                        <div class="media-mini mt-3">
+                                            <a href="#">
+                                                <img src="{{ asset($ctg->gambar)}}" class="img-fluid" alt="">
+                                            </a>
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="col-md-4 media-list span4 text-left">
-                                    <h5 class="tittle-w3layouts-sub">Tittle goes here </h5>
-                                    <div class="media-mini mt-3">
-                                        <a href="shop.html">
-                                            <img src="{{ asset('newcatalog/images/g3.jpg')}}" class="img-fluid" alt="">
-                                        </a>
+                                    @endif
+                                    @if($startCount == $categoryRandId2)
+                                    <div class="col-md-4 media-list span4 text-left">
+                                        <h5 class="tittle-w3layouts-sub"> {{$ctg->name}} </h5>
+                                        <div class="media-mini mt-3">
+                                            <a href="#">
+                                                <img src="{{ asset($ctg->gambar)}}" class="img-fluid" alt="">
+                                            </a>
+                                        </div>
                                     </div>
-
-                                </div>
+                                    @endif
+                                    @php
+                                        $startCount = $startCount+1;
+                                    @endphp
+                                @endforeach
                             </div>
                             <hr>
+                            <div class="text-center"><a href="#">View More Category</a></div>
                         </li>
                     </ul>
                 </li>
@@ -166,92 +169,83 @@
                     <ul class="dropdown-menu mega-menu ">
                         <li>
                             <div class="row">
-                                <div class="col-md-4 media-list span4 text-left">
-                                    <h5 class="tittle-w3layouts-sub"> Tittle goes here </h5>
-                                    <ul>
-                                        <li class="media-mini mt-3">
-                                            <a href="shop.html">Designer Glasses</a>
-                                        </li>
-                                        <li class="">
-                                            <a href="shop.html"> Ray-Ban</a>
-                                        </li>
-                                        <li>
-                                            <a href="shop.html">Prescription Glasses</a>
-                                        </li>
-                                        <li>
-                                            <a href="shop.html">Rx Sunglasses</a>
-                                        </li>
-                                        <li>
-                                            <a href="shop.html">Contact Lenses</a>
-                                        </li>
-                                        <li>
-                                            <a href="shop.html">Multifocal Glasses</a>
-                                        </li>
-                                        <li>
-                                            <a href="shop.html">Kids Glasses</a>
-                                        </li>
-                                        <li>
-                                            <a href="shop.html">Lightweight Glasses</a>
-                                        </li>
-                                        <li>
-                                            <a href="shop.html">Sports Glasses</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <div class="col-md-4 media-list span4 text-left">
-                                    <h5 class="tittle-w3layouts-sub"> Tittle goes here </h5>
-                                    <ul>
-                                        <li class="media-mini mt-3">
-
-                                            <a href="shop.html">Brooks Brothers</a>
-                                        </li>
-                                        <li>
-                                            <a href="shop.html">Persol</a>
-                                        </li>
-                                        <li>
-                                            <a href="shop.html">Polo Ralph Lauren</a>
-                                        </li>
-                                        <li>
-                                            <a href="shop.html">Prada</a>
-                                        </li>
-                                        <li>
-                                            <a href="shop.html">Ray-Ban Jr</a>
-                                        </li>
-                                        <li>
-                                            <a href="shop.html">Sferoflex</a>
-                                        </li>
-                                    </ul>
-                                    <ul class="sub-in text-left">
-
-                                        <li>
-                                            <a href="shop.html">Polo Ralph Lauren</a>
-                                        </li>
-                                        <li>
-                                            <a href="shop.html">Prada</a>
-                                        </li>
-                                        <li>
-                                            <a href="shop.html">Ray-Ban Jr</a>
-                                        </li>
-                                    </ul>
-
-                                </div>
+                                @php $startCount = 1; @endphp
+                                @foreach ($catAll as $ctg)
+                                    @if($startCount == $categoryRandId1)
+                                    <div class="col-md-4 media-list span4 text-left">
+                                        <h5 class="tittle-w3layouts-sub"> {{$ctg->name}} </h5><br>
+                                        <ul>
+                                            @foreach($sixthpost as $postAll)
+                                                @if($postAll->category_id == $ctg->id)
+                                                <li class="">
+                                                    <a href="#">{{ $postAll->title }}</a>
+                                                </li>
+                                                @endif
+                                            @endforeach
+                                        </ul>
+                                    </div>
+                                    @endif
+                                    @if($startCount == $categoryRandId2)
+                                    <div class="col-md-4 media-list span4 text-left">
+                                        <h5 class="tittle-w3layouts-sub"> {{$ctg->name}} </h5><br>
+                                        <ul>
+                                            @foreach($sixthpost as $postAll)
+                                                @if($postAll->category_id == $ctg->id)
+                                                <li class="">
+                                                    <a href="#">{{ $postAll->title }}</a>
+                                                </li>
+                                                @endif
+                                            @endforeach
+                                        </ul>
+                                    </div>
+                                    @endif
+                                    @php $startCount = $startCount+1 @endphp
+                                @endforeach
+                                @foreach($pst as $postFeatured)
+                                    @php
+                                        $featuredProduct[0] = $postFeatured->id;
+                                        $featuredProduct[1] = $postFeatured->title;
+                                        $featuredProduct[2] = $postFeatured->featured;
+                                        $startCount = $startCount+1;
+                                    @endphp
+                                @endforeach
+                                @php 
+                                    try {
+                                @endphp
                                 <div class="col-md-4 media-list span4 text-left">
 
-                                    <h5 class="tittle-w3layouts-sub-nav">Tittle goes here </h5>
+                                    <h5 class="tittle-w3layouts-sub-nav">{{$featuredProduct[1]}} </h5>
                                     <div class="media-mini mt-3">
-                                        <a href="shop.html">
-                                            <img src="{{ asset('newcatalog/images/g1.jpg')}}" class="img-fluid" alt="">
+                                        <a href="#">
+                                            <img src="{{ asset($featuredProduct[2])}}" class="img-fluid" alt="">
                                         </a>
                                     </div>
 
                                 </div>
+                                @php 
+                                    } catch (\Throwable $th) {
+                                        echo'
+                                        <div class="col-md-4 media-list span4 text-left">
+
+                                            <h5 class="tittle-w3layouts-sub-nav"> </h5>
+                                            <div class="media-mini mt-3">
+                                                <a href="#">
+                                                    <img src="" class="img-fluid" alt="">
+                                                </a>
+                                            </div>
+
+                                        </div>
+                                        ';
+                                    }
+                                @endphp
                             </div>
                             <hr>
+                            <div class="text-center"><a href="#">View More Product</a></div>
                         </li>
                     </ul>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="contact.html">Contact</a>
+                <li class="nav-item @if($_SERVER['REQUEST_URI'] == '/contact') active @endif">
+                    <a class="nav-link" href="/contact">Contact</a>
                 </li>
             </ul>
 
