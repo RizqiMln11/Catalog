@@ -28,6 +28,14 @@
 							{{ csrf_field() }}
 
 							<div class="form-group">
+								<label for="name">Produk</label>
+								<select name="post_id" class="form-control">
+									@foreach($posts as $post)
+										<option value="{{$post->id}}">{{$post->title}}</option>
+									@endforeach
+								</select>
+                            </div>
+							<div class="form-group">
 								<label for="name">Harga Normal</label>
 								<input type="number" name="harga_normal" class="form-control">
                             </div>

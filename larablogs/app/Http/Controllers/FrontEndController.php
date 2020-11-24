@@ -8,6 +8,8 @@ use App\Post;
 use App\Auth;
 use App\Category;
 use App\Setting;
+use App\PostPrice;
+use App\price;
 use Illuminate\Http\Request;
 
 class FrontEndController extends Controller
@@ -29,7 +31,10 @@ class FrontEndController extends Controller
         $pst = Post::orderBy('created_at', 'desc')->take(5)->get();
         $sixthpost = Post::orderBy('created_at', 'desc')->take(10)->get();
         $pstEditorPick = Post::inRandomOrder()->take(2)->get();
-        return view('index2', compact('post', $post, 'limit', $limit, $full, 'full', $pst, 'pst', $sixthpost, 'sixthpost', 'catAll', $catAll, 'pstEditorPick', $pstEditorPick))
+        $pstPrice = new PostPrice;
+        $prices = new price;
+        $pstHomePage = Post::inRandomOrder()->take(8)->get();
+        return view('index2', compact('post', $post, 'limit', $limit, $full, 'full', $pst, 'pst', $sixthpost, 'sixthpost', 'catAll', $catAll, 'pstEditorPick', $pstEditorPick, 'pstPrice', $pstPrice, 'prices', $prices,'pstHomePage', $pstHomePage))
                     ->with('profile', Profile::first())
                     ->with('setting', Setting::first())
                     ->with('title', Setting::first()->site_name)

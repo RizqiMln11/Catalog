@@ -3,13 +3,13 @@
 namespace App\Http\Controllers;
 
 
-
 use Auth;
 use App\Tag;
 use Session;
 use App\Post;
 use App\category;
 use App\price;
+use App\PostPrice;
 use Illuminate\Http\Request;
 
 class PostController extends Controller
@@ -31,17 +31,22 @@ class PostController extends Controller
         // dd($request->tags);
 
         $this->validate($request, [
+            'post_id'      => 'required',
             'harga_normal' => 'required',
             'harga_diskon' => 'required',
 
         ]);
 
-
         $post = price::create([
             'harga_normal' => $request->harga_normal,
             'harga_diskon' => $request->harga_diskon,
         ]);
-
+        
+        $lastsPostPrice = price::orderBy('id', 'desc')->first();
+        PostPrice::create([
+            'posts_id' => $request->post_id,
+            'prices_id' => $lastsPostPrice->id
+        ]);
         
         if($post){
             Session::flash('succes', 'Price Creates Succesfully');
@@ -71,21 +76,30 @@ class PostController extends Controller
 
     public function createprice()
     {
-        return view('admin.posts.createprice');
+        $postPrices = PostPrice::all();
+        $postPricesExits = [];
+        foreach ($postPrices as $key) {
+            $postPricesExits[] = $key->posts_id;
+        }
+        $posts = Post::whereNotIn('id', $postPricesExits)->get();
+        return view('admin.posts.createprice', compact('posts', $posts, 'postPrices', $postPrices));
     }
     
     public function listprice()
     {
-        $prices = price::all();
-        return view('admin.posts.pricelist', compact('prices', $prices));
+        // $prices = price::all();
+        $prices = new price;
+        $postPrices = new PostPrice;
+        $posts = new Post;
+        return view('admin.posts.pricelist', compact('prices', $prices,'postPrices', $postPrices, 'posts', $posts));
     }
 
     public function editprice($id)
     {
         $prices = price::find($id);
-
-
-        return view('admin.posts.editprice')->with('prices', $prices);
+        $postPrice = PostPrice::where('prices_id', $id)->first();
+        $postDetail = Post::where('id', $postPrice->posts_id)->first();
+        return view('admin.posts.editprice', compact('postDetail', $postDetail))->with('prices', $prices);
     }
 
     public function updateprice(Request $request, $id)
@@ -105,7 +119,8 @@ class PostController extends Controller
     public function destroyprice($id)
     {
         $price = price::find($id);
-
+        $postPrice = PostPrice::where('prices_id', $id)->first();
+        $postPrice->delete();
         $price->delete();
 
         Session::flash('success', 'Berhasil di hapus');

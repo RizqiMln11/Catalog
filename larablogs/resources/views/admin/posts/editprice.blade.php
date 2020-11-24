@@ -27,7 +27,11 @@
 					<div class="card-body">
 						<form action=" {{ route('price.update', ['id'=>$prices->id] ) }} " method="post" enctype="multipart/form-data">
 							{{ csrf_field() }}
-
+							
+							<div class="form-group">
+								<label for="name">Nama Produk</label>
+								<input type="text" name="post_id" value="{{ $postDetail->title }}" class="form-control" disabled>
+							</div>
 							<div class="form-group">
 								<label for="name">Harga Normal</label>
 								<input type="text" name="harga_normal" value="{{ $prices->harga_normal }}" class="form-control">

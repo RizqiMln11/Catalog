@@ -11,6 +11,7 @@
         <div class="col-md-6 logo-w3layouts text-center">
             <h1 class="logo-w3layouts">
                 <a class="navbar-brand" href="/">
+                    <img src="{{asset('newcatalog/images/logo.png')}}" style="height: 1em;">
                    {{$setting->site_name}} </a>
             </h1>
         </div>

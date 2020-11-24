@@ -100,14 +100,15 @@
 				<h3 class="tittle-w3layouts my-lg-4 my-4">New Arrivals for you </h3>
 				<div class="row">
 					<!-- /womens -->
+					@foreach($pstHomePage as $pstHomePg)
 					<div class="col-md-3 product-men women_two">
 						<div class="product-googles-info googles">
 							<div class="men-pro-item">
 								<div class="men-thumb-item">
-									<img src="newcatalog/images/s1.jpg" class="img-fluid" alt="">
+									<img src="{{asset($pstHomePg->featured)}}" class="img-fluid"  style="height: 210px !important;">
 									<div class="men-cart-pro">
 										<div class="inner-men-cart-pro">
-											<a href="single.html" class="link-product-add-cart">Quick View</a>
+											<a href="catalog/{{$pstHomePg->slug}}" class="link-product-add-cart">Quick View</a>
 										</div>
 									</div>
 									<span class="product-new-top">New</span>
@@ -117,53 +118,31 @@
 										<div class="grid_meta">
 											<div class="product_price">
 												<h4>
-													<a href="single.html">Farenheit (Grey)</a>
+													<a href="catalog/{{$pstHomePg->slug}}">{{$pstHomePg->title}}</a>
 												</h4>
 												<div class="grid-price mt-2">
-													<span class="money ">$575.00</span>
+													@php
+														$pricing = $pstPrice::where('posts_id', $pstHomePg->id)->first();
+														$pricing = $prices::where('id', $pricing->prices_id)->first();
+													@endphp
+													<span class="money ">{{ "Rp " . number_format((float)$pricing->harga_diskon,2,',','.')}}</span>
 												</div>
 											</div>
 											<ul class="stars">
-												<li>
-													<a href="#">
-														<i class="fa fa-star" aria-hidden="true"></i>
-													</a>
-												</li>
-												<li>
-													<a href="#">
-														<i class="fa fa-star" aria-hidden="true"></i>
-													</a>
-												</li>
-												<li>
-													<a href="#">
-														<i class="fa fa-star" aria-hidden="true"></i>
-													</a>
-												</li>
-												<li>
-													<a href="#">
-														<i class="fa fa-star" aria-hidden="true"></i>
-													</a>
-												</li>
-												<li>
-													<a href="#">
-														<i class="fa fa-star-half-o" aria-hidden="true"></i>
-													</a>
-												</li>
+											@php
+												$star = rand(3,5);
+											@endphp
+											@for($i = 0; $i < $star; $i++)
+											<li>
+												<a href="#">
+													<i class="fa fa-star" aria-hidden="true"></i>
+												</a>
+											</li>
+											@endfor
 											</ul>
 										</div>
 										<div class="googles single-item hvr-outline-out">
-											<form action="#" method="post">
-												<input type="hidden" name="cmd" value="_cart">
-												<input type="hidden" name="add" value="1">
-												<input type="hidden" name="googles_item" value="Farenheit">
-												<input type="hidden" name="amount" value="575.00">
-												<button type="submit" class="googles-cart pgoogles-cart">
-													<i class="fas fa-cart-plus"></i>
-												</button>
-
-												
-											</form>
-
+											<a href="catalog/{{$pstHomePg->slug}}"><i class="fas fa-cart-plus" style="margin-top: 1em;font-size: 14pt;"></i></a>
 										</div>
 									</div>
 									<div class="clearfix"></div>
@@ -171,510 +150,7 @@
 							</div>
 						</div>
 					</div>
-					<div class="col-md-3 product-men women_two">
-						<div class="product-googles-info googles">
-							<div class="men-pro-item">
-								<div class="men-thumb-item">
-									<img src="newcatalog/images/s2.jpg" class="img-fluid" alt="">
-									<div class="men-cart-pro">
-										<div class="inner-men-cart-pro">
-											<a href="single.html" class="link-product-add-cart">Quick View</a>
-										</div>
-									</div>
-									<span class="product-new-top">New</span>
-								</div>
-								<div class="item-info-product">
-
-									<div class="info-product-price">
-										<div class="grid_meta">
-											<div class="product_price">
-												<h4>
-													<a href="single.html">Opium (Grey)</a>
-												</h4>
-												<div class="grid-price mt-2">
-													<span class="money ">$325.00</span>
-												</div>
-											</div>
-											<ul class="stars">
-												<li>
-													<a href="#">
-														<i class="fa fa-star" aria-hidden="true"></i>
-													</a>
-												</li>
-												<li>
-													<a href="#">
-														<i class="fa fa-star" aria-hidden="true"></i>
-													</a>
-												</li>
-												<li>
-													<a href="#">
-														<i class="fa fa-star" aria-hidden="true"></i>
-													</a>
-												</li>
-												<li>
-													<a href="#">
-														<i class="fa fa-star-half-o" aria-hidden="true"></i>
-													</a>
-												</li>
-												<li>
-													<a href="#">
-														<i class="fa fa-star-o" aria-hidden="true"></i>
-													</a>
-												</li>
-											</ul>
-										</div>
-										<div class="googles single-item hvr-outline-out">
-											<form action="#" method="post">
-												<input type="hidden" name="cmd" value="_cart">
-												<input type="hidden" name="add" value="1">
-												<input type="hidden" name="googles_item" value="Opium (Grey)">
-												<input type="hidden" name="amount" value="325.00">
-												<button type="submit" class="googles-cart pgoogles-cart">
-													<i class="fas fa-cart-plus"></i>
-												</button>
-
-												
-											</form>
-
-										</div>
-									</div>
-									<div class="clearfix"></div>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="col-md-3 product-men women_two">
-						<div class="product-googles-info googles">
-							<div class="men-pro-item">
-								<div class="men-thumb-item">
-									<img src="{{ asset('newcatalog/images/s3.jpg')}}" class="img-fluid" alt="">
-									<div class="men-cart-pro">
-										<div class="inner-men-cart-pro">
-											<a href="single.html" class="link-product-add-cart">Quick View</a>
-										</div>
-									</div>
-									<span class="product-new-top">New</span>
-								</div>
-								<div class="item-info-product">
-
-									<div class="info-product-price">
-										<div class="grid_meta">
-											<div class="product_price">
-												<h4>
-													<a href="single.html">Kenneth Cole</a>
-												</h4>
-												<div class="grid-price mt-2">
-													<span class="money ">$575.00</span>
-												</div>
-											</div>
-											<ul class="stars">
-												<li>
-													<a href="#">
-														<i class="fa fa-star" aria-hidden="true"></i>
-													</a>
-												</li>
-												<li>
-													<a href="#">
-														<i class="fa fa-star" aria-hidden="true"></i>
-													</a>
-												</li>
-												<li>
-													<a href="#">
-														<i class="fa fa-star" aria-hidden="true"></i>
-													</a>
-												</li>
-												<li>
-													<a href="#">
-														<i class="fa fa-star" aria-hidden="true"></i>
-													</a>
-												</li>
-												<li>
-													<a href="#">
-														<i class="fa fa-star-half-o" aria-hidden="true"></i>
-													</a>
-												</li>
-											</ul>
-										</div>
-										<div class="googles single-item hvr-outline-out">
-											<form action="#" method="post">
-												<input type="hidden" name="cmd" value="_cart">
-												<input type="hidden" name="add" value="1">
-												<input type="hidden" name="googles_item" value="Kenneth Cole">
-												<input type="hidden" name="amount" value="575.00">
-												<button type="submit" class="googles-cart pgoogles-cart">
-													<i class="fas fa-cart-plus"></i>
-												</button>
-												
-											</form>
-
-										</div>
-									</div>
-									<div class="clearfix"></div>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="col-md-3 product-men women_two">
-						<div class="product-googles-info googles">
-							<div class="men-pro-item">
-								<div class="men-thumb-item">
-									<img src="{{ asset('newcatalog/images/s4.jpg')}}" class="img-fluid" alt="">
-									<div class="men-cart-pro">
-										<div class="inner-men-cart-pro">
-											<a href="single.html" class="link-product-add-cart">Quick View</a>
-										</div>
-									</div>
-									<span class="product-new-top">New</span>
-								</div>
-								<div class="item-info-product">
-
-									<div class="info-product-price">
-										<div class="grid_meta">
-											<div class="product_price">
-												<h4>
-													<a href="single.html">Farenheit Oval </a>
-												</h4>
-												<div class="grid-price mt-2">
-													<span class="money ">$325.00</span>
-												</div>
-											</div>
-											<ul class="stars">
-												<li>
-													<a href="#">
-														<i class="fa fa-star" aria-hidden="true"></i>
-													</a>
-												</li>
-												<li>
-													<a href="#">
-														<i class="fa fa-star" aria-hidden="true"></i>
-													</a>
-												</li>
-												<li>
-													<a href="#">
-														<i class="fa fa-star" aria-hidden="true"></i>
-													</a>
-												</li>
-												<li>
-													<a href="#">
-														<i class="fa fa-star-half-o" aria-hidden="true"></i>
-													</a>
-												</li>
-												<li>
-													<a href="#">
-														<i class="fa fa-star-o" aria-hidden="true"></i>
-													</a>
-												</li>
-											</ul>
-										</div>
-										<div class="googles single-item hvr-outline-out">
-											<form action="#" method="post">
-												<input type="hidden" name="cmd" value="_cart">
-												<input type="hidden" name="add" value="1">
-												<input type="hidden" name="googles_item" value="Farenheit Oval">
-												<input type="hidden" name="amount" value="325.00">
-												<button type="submit" class="googles-cart pgoogles-cart">
-													<i class="fas fa-cart-plus"></i>
-												</button>
-
-												
-											</form>
-
-										</div>
-									</div>
-									<div class="clearfix"></div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<!-- //womens -->
-				<!-- /mens -->
-				<div class="row mt-lg-3 mt-0">
-					<!-- /womens -->
-					<div class="col-md-3 product-men women_two">
-						<div class="product-googles-info googles">
-							<div class="men-pro-item">
-								<div class="men-thumb-item">
-									<img src="newcatalog/images/m1.jpg" class="img-fluid" alt="">
-									<div class="men-cart-pro">
-										<div class="inner-men-cart-pro">
-											<a href="single.html" class="link-product-add-cart">Quick View</a>
-										</div>
-									</div>
-									<span class="product-new-top">New</span>
-								</div>
-								<div class="item-info-product">
-
-									<div class="info-product-price">
-										<div class="grid_meta">
-											<div class="product_price">
-												<h4>
-													<a href="single.html">Aislin Wayfarer </a>
-												</h4>
-												<div class="grid-price mt-2">
-													<span class="money ">$775.00</span>
-												</div>
-											</div>
-											<ul class="stars">
-												<li>
-													<a href="#">
-														<i class="fa fa-star" aria-hidden="true"></i>
-													</a>
-												</li>
-												<li>
-													<a href="#">
-														<i class="fa fa-star" aria-hidden="true"></i>
-													</a>
-												</li>
-												<li>
-													<a href="#">
-														<i class="fa fa-star" aria-hidden="true"></i>
-													</a>
-												</li>
-												<li>
-													<a href="#">
-														<i class="fa fa-star" aria-hidden="true"></i>
-													</a>
-												</li>
-												<li>
-													<a href="#">
-														<i class="fa fa-star-half-o" aria-hidden="true"></i>
-													</a>
-												</li>
-											</ul>
-										</div>
-										<div class="googles single-item hvr-outline-out">
-											<form action="#" method="post">
-												<input type="hidden" name="cmd" value="_cart">
-												<input type="hidden" name="add" value="1">
-												<input type="hidden" name="googles_item" value="Aislin Wayfarer">
-												<input type="hidden" name="amount" value="775.00">
-												<button type="submit" class="googles-cart pgoogles-cart">
-													<i class="fas fa-cart-plus"></i>
-												</button>
-												
-											</form>
-
-										</div>
-									</div>
-									<div class="clearfix"></div>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="col-md-3 product-men women_two">
-						<div class="product-googles-info googles">
-							<div class="men-pro-item">
-								<div class="men-thumb-item">
-									<img src="newcatalog/images/m2.jpg" class="img-fluid" alt="">
-									<div class="men-cart-pro">
-										<div class="inner-men-cart-pro">
-											<a href="single.html" class="link-product-add-cart">Quick View</a>
-										</div>
-									</div>
-									<span class="product-new-top">New</span>
-								</div>
-								<div class="item-info-product">
-
-									<div class="info-product-price">
-										<div class="grid_meta">
-											<div class="product_price">
-												<h4>
-													<a href="single.html">Azmani Round </a>
-												</h4>
-												<div class="grid-price mt-2">
-													<span class="money ">$725.00</span>
-												</div>
-											</div>
-											<ul class="stars">
-												<li>
-													<a href="#">
-														<i class="fa fa-star" aria-hidden="true"></i>
-													</a>
-												</li>
-												<li>
-													<a href="#">
-														<i class="fa fa-star" aria-hidden="true"></i>
-													</a>
-												</li>
-												<li>
-													<a href="#">
-														<i class="fa fa-star" aria-hidden="true"></i>
-													</a>
-												</li>
-												<li>
-													<a href="#">
-														<i class="fa fa-star-half-o" aria-hidden="true"></i>
-													</a>
-												</li>
-												<li>
-													<a href="#">
-														<i class="fa fa-star-o" aria-hidden="true"></i>
-													</a>
-												</li>
-											</ul>
-										</div>
-										<div class="googles single-item hvr-outline-out">
-											<form action="#" method="post">
-												<input type="hidden" name="cmd" value="_cart">
-												<input type="hidden" name="add" value="1">
-												<input type="hidden" name="googles_item" value="Azmani Round">
-												<input type="hidden" name="amount" value="725.00">
-												<button type="submit" class="googles-cart pgoogles-cart">
-													<i class="fas fa-cart-plus"></i>
-												</button>
-
-												
-											</form>
-										</div>
-									</div>
-									<div class="clearfix"></div>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="col-md-3 product-men women_two">
-						<div class="product-googles-info googles">
-							<div class="men-pro-item">
-								<div class="men-thumb-item">
-									<img src="newcatalog/images/m3.jpg" class="img-fluid" alt="">
-									<div class="men-cart-pro">
-										<div class="inner-men-cart-pro">
-											<a href="single.html" class="link-product-add-cart">Quick View</a>
-										</div>
-									</div>
-									<span class="product-new-top">New</span>
-								</div>
-								<div class="item-info-product">
-
-									<div class="info-product-price">
-										<div class="grid_meta">
-											<div class="product_price">
-												<h4>
-													<a href="single.html">Farenheit Wayfarer</a>
-												</h4>
-												<div class="grid-price mt-2">
-													<span class="money ">$475.00</span>
-												</div>
-											</div>
-											<ul class="stars">
-												<li>
-													<a href="#">
-														<i class="fa fa-star" aria-hidden="true"></i>
-													</a>
-												</li>
-												<li>
-													<a href="#">
-														<i class="fa fa-star" aria-hidden="true"></i>
-													</a>
-												</li>
-												<li>
-													<a href="#">
-														<i class="fa fa-star" aria-hidden="true"></i>
-													</a>
-												</li>
-												<li>
-													<a href="#">
-														<i class="fa fa-star" aria-hidden="true"></i>
-													</a>
-												</li>
-												<li>
-													<a href="#">
-														<i class="fa fa-star-half-o" aria-hidden="true"></i>
-													</a>
-												</li>
-											</ul>
-										</div>
-										<div class="googles single-item hvr-outline-out">
-											<form action="#" method="post">
-												<input type="hidden" name="cmd" value="_cart">
-												<input type="hidden" name="add" value="1">
-												<input type="hidden" name="googles_item" value="Farenheit Wayfarer">
-												<input type="hidden" name="amount" value="475.00">
-												<button type="submit" class="googles-cart pgoogles-cart">
-													<i class="fas fa-cart-plus"></i>
-												</button>
-											
-											</form>
-
-										</div>
-									</div>
-									<div class="clearfix"></div>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="col-md-3 product-men women_two">
-						<div class="product-googles-info googles">
-							<div class="men-pro-item">
-								<div class="men-thumb-item">
-									<img src="newcatalog/images/m4.jpg" class="img-fluid" alt="">
-									<div class="men-cart-pro">
-										<div class="inner-men-cart-pro">
-											<a href="single.html" class="link-product-add-cart">Quick View</a>
-										</div>
-									</div>
-									<span class="product-new-top">New</span>
-								</div>
-								<div class="item-info-product">
-
-									<div class="info-product-price">
-										<div class="grid_meta">
-											<div class="product_price">
-												<h4>
-													<a href="single.html">Fossil Wayfarer </a>
-												</h4>
-												<div class="grid-price mt-2">
-													<span class="money ">$825.00</span>
-												</div>
-											</div>
-											<ul class="stars">
-												<li>
-													<a href="#">
-														<i class="fa fa-star" aria-hidden="true"></i>
-													</a>
-												</li>
-												<li>
-													<a href="#">
-														<i class="fa fa-star" aria-hidden="true"></i>
-													</a>
-												</li>
-												<li>
-													<a href="#">
-														<i class="fa fa-star" aria-hidden="true"></i>
-													</a>
-												</li>
-												<li>
-													<a href="#">
-														<i class="fa fa-star-half-o" aria-hidden="true"></i>
-													</a>
-												</li>
-												<li>
-													<a href="#">
-														<i class="fa fa-star-o" aria-hidden="true"></i>
-													</a>
-												</li>
-											</ul>
-										</div>
-										<div class="googles single-item hvr-outline-out">
-											<form action="#" method="post">
-												<input type="hidden" name="cmd" value="_cart">
-												<input type="hidden" name="add" value="1">
-												<input type="hidden" name="googles_item" value="Fossil Wayfarer">
-												<input type="hidden" name="amount" value="825.00">
-												<button type="submit" class="googles-cart pgoogles-cart">
-													<i class="fas fa-cart-plus"></i>
-												</button>
-											</form>
-
-										</div>
-									</div>
-									<div class="clearfix"></div>
-								</div>
-							</div>
-						</div>
-					</div>
-					<!-- /mens -->
+					@endforeach
 				</div>
 				<!--//row-->
 				<!--/meddle-->
@@ -694,16 +170,17 @@
 					<!--//banner-sec-->
 					<div class="mid-slider">
 						<div class="owl-carousel owl-theme row">
+							@foreach($pst as $postfive)
 							<div class="item">
 								<div class="gd-box-info text-center">
 									<div class="product-men women_two bot-gd">
 										<div class="product-googles-info slide-img googles">
 											<div class="men-pro-item">
 												<div class="men-thumb-item">
-													<img src="newcatalog/images/s5.jpg" class="img-fluid" alt="">
+													<img src="{{asset($postfive->featured)}}" class="img-fluid" style="height: 210px !important;">
 													<div class="men-cart-pro">
 														<div class="inner-men-cart-pro">
-															<a href="single.html" class="link-product-add-cart">Quick View</a>
+															<a href="catalog/{{$postfive->slug}}" class="link-product-add-cart">Quick View</a>
 														</div>
 													</div>
 													<span class="product-new-top">New</span>
@@ -714,51 +191,31 @@
 														<div class="grid_meta">
 															<div class="product_price">
 																<h4>
-																	<a href="single.html">Fastrack Aviator </a>
+																	<a href="catalog/{{$postfive->slug}}">{{$postfive->title}} </a>
 																</h4>
 																<div class="grid-price mt-2">
-																	<span class="money ">$325.00</span>
+																	@php
+																		$pricing = $pstPrice::where('posts_id', $postfive->id)->first();
+																		$pricing = $prices::where('id', $pricing->prices_id)->first();
+																	@endphp
+																	<span class="money ">{{ "Rp " . number_format((float)$pricing->harga_diskon,2,',','.')}}</span>
 																</div>
 															</div>
 															<ul class="stars">
+																@php
+																	$star = rand(3,5);
+																@endphp
+																@for($i = 0; $i < $star; $i++)
 																<li>
 																	<a href="#">
 																		<i class="fa fa-star" aria-hidden="true"></i>
 																	</a>
 																</li>
-																<li>
-																	<a href="#">
-																		<i class="fa fa-star" aria-hidden="true"></i>
-																	</a>
-																</li>
-																<li>
-																	<a href="#">
-																		<i class="fa fa-star" aria-hidden="true"></i>
-																	</a>
-																</li>
-																<li>
-																	<a href="#">
-																		<i class="fa fa-star-half-o" aria-hidden="true"></i>
-																	</a>
-																</li>
-																<li>
-																	<a href="#">
-																		<i class="fa fa-star-o" aria-hidden="true"></i>
-																	</a>
-																</li>
+																@endfor
 															</ul>
 														</div>
 														<div class="googles single-item hvr-outline-out">
-															<form action="#" method="post">
-																<input type="hidden" name="cmd" value="_cart">
-																<input type="hidden" name="add" value="1">
-																<input type="hidden" name="googles_item" value="Fastrack Aviator">
-																<input type="hidden" name="amount" value="325.00">
-																<button type="submit" class="googles-cart pgoogles-cart">
-																	<i class="fas fa-cart-plus"></i>
-																</button>
-															</form>
-
+															<a href="catalog/{{$postfive->slug}}"><i class="fas fa-cart-plus" style="margin-top: 1em;font-size: 14pt;"></i></a>
 														</div>
 													</div>
 
@@ -768,376 +225,7 @@
 									</div>
 								</div>
 							</div>
-							<div class="item">
-								<div class="gd-box-info text-center">
-									<div class="product-men women_two bot-gd">
-										<div class="product-googles-info slide-img googles">
-											<div class="men-pro-item">
-												<div class="men-thumb-item">
-													<img src="newcatalog/images/s6.jpg" class="img-fluid" alt="">
-													<div class="men-cart-pro">
-														<div class="inner-men-cart-pro">
-															<a href="single.html" class="link-product-add-cart">Quick View</a>
-														</div>
-													</div>
-													<span class="product-new-top">New</span>
-												</div>
-												<div class="item-info-product">
-
-													<div class="info-product-price">
-														<div class="grid_meta">
-															<div class="product_price">
-																<h4>
-																	<a href="single.html">MARTIN Aviator </a>
-																</h4>
-																<div class="grid-price mt-2">
-																	<span class="money ">$425.00</span>
-																</div>
-															</div>
-															<ul class="stars">
-																<li>
-																	<a href="#">
-																		<i class="fa fa-star" aria-hidden="true"></i>
-																	</a>
-																</li>
-																<li>
-																	<a href="#">
-																		<i class="fa fa-star" aria-hidden="true"></i>
-																	</a>
-																</li>
-																<li>
-																	<a href="#">
-																		<i class="fa fa-star" aria-hidden="true"></i>
-																	</a>
-																</li>
-																<li>
-																	<a href="#">
-																		<i class="fa fa-star-half-o" aria-hidden="true"></i>
-																	</a>
-																</li>
-																<li>
-																	<a href="#">
-																		<i class="fa fa-star-o" aria-hidden="true"></i>
-																	</a>
-																</li>
-															</ul>
-														</div>
-														<div class="googles single-item hvr-outline-out">
-															<form action="#" method="post">
-																<input type="hidden" name="cmd" value="_cart">
-																<input type="hidden" name="add" value="1">
-																<input type="hidden" name="googles_item" value="MARTIN Aviator">
-																<input type="hidden" name="amount" value="425.00">
-																<button type="submit" class="googles-cart pgoogles-cart">
-																	<i class="fas fa-cart-plus"></i>
-																</button>
-															</form>
-
-														</div>
-													</div>
-
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="item">
-								<div class="gd-box-info text-center">
-									<div class="product-men women_two bot-gd">
-										<div class="product-googles-info slide-img googles">
-											<div class="men-pro-item">
-												<div class="men-thumb-item">
-													<img src="newcatalog/images/s7.jpg" class="img-fluid" alt="">
-													<div class="men-cart-pro">
-														<div class="inner-men-cart-pro">
-															<a href="single.html" class="link-product-add-cart">Quick View</a>
-														</div>
-													</div>
-													<span class="product-new-top">New</span>
-												</div>
-												<div class="item-info-product">
-
-													<div class="info-product-price">
-														<div class="grid_meta">
-															<div class="product_price">
-																<h4>
-																	<a href="single.html">Royal Son Aviator </a>
-																</h4>
-																<div class="grid-price mt-2">
-																	<span class="money ">$425.00</span>
-																</div>
-															</div>
-															<ul class="stars">
-																<li>
-																	<a href="#">
-																		<i class="fa fa-star" aria-hidden="true"></i>
-																	</a>
-																</li>
-																<li>
-																	<a href="#">
-																		<i class="fa fa-star" aria-hidden="true"></i>
-																	</a>
-																</li>
-																<li>
-																	<a href="#">
-																		<i class="fa fa-star" aria-hidden="true"></i>
-																	</a>
-																</li>
-																<li>
-																	<a href="#">
-																		<i class="fa fa-star-half-o" aria-hidden="true"></i>
-																	</a>
-																</li>
-																<li>
-																	<a href="#">
-																		<i class="fa fa-star-o" aria-hidden="true"></i>
-																	</a>
-																</li>
-															</ul>
-														</div>
-														<div class="googles single-item hvr-outline-out">
-															<form action="#" method="post">
-																<input type="hidden" name="cmd" value="_cart">
-																<input type="hidden" name="add" value="1">
-																<input type="hidden" name="googles_item" value="Royal Son Aviator">
-																<input type="hidden" name="amount" value="425.00">
-																<button type="submit" class="googles-cart pgoogles-cart">
-																	<i class="fas fa-cart-plus"></i>
-																</button>
-															</form>
-
-														</div>
-													</div>
-
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="item">
-								<div class="gd-box-info text-center">
-									<div class="product-men women_two bot-gd">
-										<div class="product-googles-info slide-img googles">
-											<div class="men-pro-item">
-												<div class="men-thumb-item">
-													<img src="newcatalog/images/s8.jpg" class="img-fluid" alt="">
-													<div class="men-cart-pro">
-														<div class="inner-men-cart-pro">
-															<a href="single.html" class="link-product-add-cart">Quick View</a>
-														</div>
-													</div>
-													<span class="product-new-top">New</span>
-												</div>
-												<div class="item-info-product">
-
-													<div class="info-product-price">
-														<div class="grid_meta">
-															<div class="product_price">
-																<h4>
-																	<a href="single.html">Irayz Butterfly </a>
-																</h4>
-																<div class="grid-price mt-2">
-																	<span class="money ">$281.00</span>
-																</div>
-															</div>
-															<ul class="stars">
-																<li>
-																	<a href="#">
-																		<i class="fa fa-star" aria-hidden="true"></i>
-																	</a>
-																</li>
-																<li>
-																	<a href="#">
-																		<i class="fa fa-star" aria-hidden="true"></i>
-																	</a>
-																</li>
-																<li>
-																	<a href="#">
-																		<i class="fa fa-star" aria-hidden="true"></i>
-																	</a>
-																</li>
-																<li>
-																	<a href="#">
-																		<i class="fa fa-star-half-o" aria-hidden="true"></i>
-																	</a>
-																</li>
-																<li>
-																	<a href="#">
-																		<i class="fa fa-star-o" aria-hidden="true"></i>
-																	</a>
-																</li>
-															</ul>
-														</div>
-														<div class="googles single-item hvr-outline-out">
-															<form action="#" method="post">
-																<input type="hidden" name="cmd" value="_cart">
-																<input type="hidden" name="add" value="1">
-																<input type="hidden" name="googles_item" value="Irayz Butterfly">
-																<input type="hidden" name="amount" value="281.00">
-																<button type="submit" class="googles-cart pgoogles-cart">
-																	<i class="fas fa-cart-plus"></i>
-																</button>
-															</form>
-
-														</div>
-													</div>
-
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="item">
-								<div class="gd-box-info text-center">
-									<div class="product-men women_two bot-gd">
-										<div class="product-googles-info slide-img googles">
-											<div class="men-pro-item">
-												<div class="men-thumb-item">
-													<img src="newcatalog/images/s9.jpg" class="img-fluid" alt="">
-													<div class="men-cart-pro">
-														<div class="inner-men-cart-pro">
-															<a href="single.html" class="link-product-add-cart">Quick View</a>
-														</div>
-													</div>
-													<span class="product-new-top">New</span>
-												</div>
-												<div class="item-info-product">
-
-													<div class="info-product-price">
-														<div class="grid_meta">
-															<div class="product_price">
-																<h4>
-																	<a href="single.html">Jerry Rectangular </a>
-																</h4>
-																<div class="grid-price mt-2">
-																	<span class="money ">$525.00</span>
-																</div>
-															</div>
-															<ul class="stars">
-																<li>
-																	<a href="#">
-																		<i class="fa fa-star" aria-hidden="true"></i>
-																	</a>
-																</li>
-																<li>
-																	<a href="#">
-																		<i class="fa fa-star" aria-hidden="true"></i>
-																	</a>
-																</li>
-																<li>
-																	<a href="#">
-																		<i class="fa fa-star" aria-hidden="true"></i>
-																	</a>
-																</li>
-																<li>
-																	<a href="#">
-																		<i class="fa fa-star-half-o" aria-hidden="true"></i>
-																	</a>
-																</li>
-																<li>
-																	<a href="#">
-																		<i class="fa fa-star-o" aria-hidden="true"></i>
-																	</a>
-																</li>
-															</ul>
-														</div>
-														<div class="googles single-item hvr-outline-out">
-															<form action="#" method="post">
-																<input type="hidden" name="cmd" value="_cart">
-																<input type="hidden" name="add" value="1">
-																<input type="hidden" name="googles_item" value="Jerry Rectangular ">
-																<input type="hidden" name="amount" value="525.00">
-																<button type="submit" class="googles-cart pgoogles-cart">
-																	<i class="fas fa-cart-plus"></i>
-																</button>
-															</form>
-
-														</div>
-													</div>
-
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="item">
-								<div class="gd-box-info text-center">
-									<div class="product-men women_two bot-gd">
-										<div class="product-googles-info slide-img googles">
-											<div class="men-pro-item">
-												<div class="men-thumb-item">
-													<img src="newcatalog/images/s10.jpg" class="img-fluid" alt="">
-													<div class="men-cart-pro">
-														<div class="inner-men-cart-pro">
-															<a href="single.html" class="link-product-add-cart">Quick View</a>
-														</div>
-													</div>
-													<span class="product-new-top">New</span>
-												</div>
-												<div class="item-info-product">
-
-													<div class="info-product-price">
-														<div class="grid_meta">
-															<div class="product_price">
-																<h4>
-																	<a href="single.html">Herdy Wayfarer </a>
-																</h4>
-																<div class="grid-price mt-2">
-																	<span class="money ">$325.00</span>
-																</div>
-															</div>
-															<ul class="stars">
-																<li>
-																	<a href="#">
-																		<i class="fa fa-star" aria-hidden="true"></i>
-																	</a>
-																</li>
-																<li>
-																	<a href="#">
-																		<i class="fa fa-star" aria-hidden="true"></i>
-																	</a>
-																</li>
-																<li>
-																	<a href="#">
-																		<i class="fa fa-star" aria-hidden="true"></i>
-																	</a>
-																</li>
-																<li>
-																	<a href="#">
-																		<i class="fa fa-star-half-o" aria-hidden="true"></i>
-																	</a>
-																</li>
-																<li>
-																	<a href="#">
-																		<i class="fa fa-star-o" aria-hidden="true"></i>
-																	</a>
-																</li>
-															</ul>
-														</div>
-														<div class="googles single-item hvr-outline-out">
-															<form action="#" method="post">
-																<input type="hidden" name="cmd" value="_cart">
-																<input type="hidden" name="add" value="1">
-																<input type="hidden" name="googles_item" value="Herdy Wayfarer">
-																<input type="hidden" name="amount" value="325.00">
-																<button type="submit" class="googles-cart pgoogles-cart">
-																	<i class="fas fa-cart-plus"></i>
-																</button>
-															</form>
-
-														</div>
-													</div>
-
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
+							@endforeach
 						</div>
 					</div>
 				</div>
