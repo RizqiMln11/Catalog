@@ -43,31 +43,31 @@
 
 							<div class="form-group">
 								<label for="image">Upload New Avatar</label>
-								<img src="{{ asset($user->profile->avatar) }}" alt="" width="100" height="auto">
+								<img src="{{ asset($user->profile->avatar ?? '') }}" alt="" width="100" height="auto">
 								<input type="file" name="avatar" class="form-control">
 							</div>
 							<div class="form-group">
 								<label for="name">Vision</label>
-								<input type="name" name="vision" value="{{ $user->profile->vision }}" class="form-control">
+								<input type="name" name="vision" value="{{ $user->profile->vision ?? '' }}" class="form-control">
 							</div>
 							<div class="form-group">
 								<label for="name">Mission</label>
-								<input type="name" name="mission" value="{{ $user->profile->mission }}" class="form-control">
+								<input type="name" name="mission" value="{{ $user->profile->mission ?? '' }}" class="form-control">
 							</div>
 
 							<div class="form-group">
 								<label for="name">Facebook Profile</label>
-								<input type="name" name="facebook" value="{{ $user->profile->facebook }}" class="form-control">
+								<input type="name" name="facebook" value="{{ $user->profile->facebook  ?? ''}}" class="form-control">
 							</div>
 
 							<div class="form-group">
 								<label for="about">About you</label>
-								<textarea name="about" id="about" cols="6" rows="6" class="form-control">{{ $user->profile->about }}</textarea>
+								<textarea name="about" id="about" cols="6" rows="6" class="form-control">{{ $user->profile->about  ?? ''}}</textarea>
 							</div>
 
 							<div class="form-group">
 								<label for="password">Youtube Profile</label>
-								<input type="name" name="youtube" value="{{ $user->profile->youtube }}" class="form-control">
+								<input type="name" name="youtube" value="{{ $user->profile->youtube  ?? ''}}" class="form-control">
 							</div>
 
 							<div class="form-group"> 

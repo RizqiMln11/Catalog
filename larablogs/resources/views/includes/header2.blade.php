@@ -157,7 +157,7 @@
                                 @endforeach
                             </div>
                             <hr>
-                            <div class="text-center"><a href="#">View More Category</a></div>
+                            <div class="text-center"><a href="/shop">View More Category</a></div>
                         </li>
                     </ul>
                 </li>

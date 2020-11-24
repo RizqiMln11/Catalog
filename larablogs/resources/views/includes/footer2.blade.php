@@ -71,10 +71,10 @@
 							<a href="about.html">About</a>
 						</li>
 						<li>
-							<a href="404.html">Error</a>
+							<a href="404.html">Category</a>
 						</li>
 						<li>
-							<a href="shop.html">Shop</a>
+							<a href="/shop">Shop</a>
 						</li>
 						<li>
 							<a href="contact.html">Contact Us</a>
@@ -87,9 +87,10 @@
 					</div>
 					<div class="footer-text">
 						<p>By subscribing to our mailing list you will always get latest news and updates from us.</p>
-						<form action="#" method="post">
+						<form action="{{ url('subscribe') }}" method="POST">
+							{{ csrf_field() }}
 							<input class="form-control" type="email" name="Email" placeholder="Enter your email..." required="">
-							<button class="btn1">
+							<button class="btn1" type="submit">
 								<i class="far fa-envelope" aria-hidden="true"></i>
 							</button>
 							<div class="clearfix"> </div>

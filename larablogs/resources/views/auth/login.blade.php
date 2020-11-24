@@ -2,13 +2,13 @@
 <html lang="en">
     <head>
         <meta charset="utf-8" />
-        <title>ERM - Technology Login</title>
+        <title>ERM Technology - Login</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta content="A fully featured admin theme which can be used to build CRM, CMS, etc." name="description" />
-        <meta content="Coderthemes" name="author" />
+        <meta content="Intprism Technology" name="author" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <!-- App favicon -->
-        <link rel="shortcut icon" href="{{ asset('newloginatribute/images/favicon.ico')}}">
+        <link rel="shortcut icon" href="{{ asset('newcatalog/images/logo.png')}}">
 
         <!-- App css -->
         <link href="{{ asset('newloginatribute/css/bootstrap.min.css')}}" rel="stylesheet" type="text/css" />
@@ -20,7 +20,7 @@
     <body class="authentication-bg authentication-bg-pattern d-flex align-items-center">
 
         <div class="home-btn d-none d-sm-block">
-            <a href="index.html"><i class="fas fa-home h2 text-white"></i></a>
+            <a href="/"><i class="fas fa-home h2 text-white"></i></a>
         </div>
         
         <div class="account-pages w-100 mt-5 mb-5">
@@ -33,7 +33,7 @@
                                 
                                 <div class="text-center mb-4">
                                     <a href="index.html">
-                                        <span><img src="{{ asset('newloginatribute/images/logo-dark.png')}}" alt="" height="28"></span>
+                                        <span><img src="{{ asset('newcatalog/images/logo.png')}}" alt="" height="28"></span>
                                     </a>
                                 </div>
 
@@ -63,7 +63,7 @@
 
                                 <div class="row mt-3">
                                     <div class="col-12 text-center">
-                                        <p class="text-muted mb-0">Don't have an account? <a href="#" class="text-dark ml-1"><b>Sign Up</b></a></p>
+                                        <p class="text-muted mb-0">Don't have an account? <a href="/contact" class="text-dark ml-1"><b>Contact Us</b></a></p>
                                     </div> <!-- end col -->
                                 </div>
                                 <!-- end row -->
