@@ -40,19 +40,19 @@
 	 					{{ $post->title }}
 	 				</td>
 	 				<td>
-	 					{{ $post->content }}
+					 	{{ substr($post->content,0,90)." ..." }}
 	 				</td>
 	 				<td>
 	 					  <img src="{{ $post->featured }}" alt=" {{ $post->title }} " width="100px" height="100"> 
 	 				</td>
 	 				<td>
 	 					<button class="btn btn-xs btn-info">
-	 						<a href="{{ route('post.restore', ['id' => $post->id]) }}"> Restore</a>
+	 						<a href="{{ route('post.restore', ['id' => $post->id]) }}" style="text-decoration:none;color:#fff !important;"> Restore</a>
 	 					</button>
 	 				</td>
 	 				<td>
 	 					<button class="btn btn-danger">
-	 						<a href="{{ route('post.kill', ['id' => $post->id]) }}"> Delete</a>
+	 						<a href="{{ route('post.kill', ['id' => $post->id]) }}" style="text-decoration:none;color:#fff !important;"> Delete</a>
 	 					</button>
 	 				</td>
 	 			</tr>

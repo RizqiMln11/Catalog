@@ -51,7 +51,7 @@
 							<h3>Men’s eyewear
 								<span>Cool summer sale 50% off</span>
 							</h3>
-							<a href="shop.html" class="btn btn-sm animated-button gibson-three mt-4">Shop Now</a>
+							<a href="/shop" class="btn btn-sm animated-button gibson-three mt-4">Shop Now</a>
 						</div>
 					</div>
 					<div class="carousel-item item2">
@@ -59,7 +59,7 @@
 							<h3>Women’s eyewear
 								<span>Want to Look Your Best?</span>
 							</h3>
-							<a href="shop.html" class="btn btn-sm animated-button gibson-three mt-4">Shop Now</a>
+							<a href="/shop" class="btn btn-sm animated-button gibson-three mt-4">Shop Now</a>
 
 						</div>
 					</div>
@@ -68,7 +68,7 @@
 							<h3>Men’s eyewear
 								<span>Cool summer sale 50% off</span>
 							</h3>
-							<a href="shop.html" class="btn btn-sm animated-button gibson-three mt-4">Shop Now</a>
+							<a href="/shop" class="btn btn-sm animated-button gibson-three mt-4">Shop Now</a>
 
 						</div>
 					</div>
@@ -77,7 +77,7 @@
 							<h3>Women’s eyewear
 								<span>Want to Look Your Best?</span>
 							</h3>
-							<a href="shop.html" class="btn btn-sm animated-button gibson-three mt-4">Shop Now</a>
+							<a href="/shop" class="btn btn-sm animated-button gibson-three mt-4">Shop Now</a>
 						</div>
 					</div>
 				</div>
@@ -1149,32 +1149,29 @@
 							<div class="carousel-inner" role="listbox">
 								<div class="carousel-item active">
 									<div class="testimonials_grid text-center">
-										<h3>Anamaria
+										<h3>Rudi Kusumo
 											<span>Customer</span>
 										</h3>
-										<label>United States</label>
-										<p>Maecenas interdum, metus vitae tincidunt porttitor, magna quam egestas sem, ac scelerisque nisl nibh vel lacus.
-											Proin eget gravida odio. Donec ullamcorper est eu accumsan cursus.</p>
+										<label>Sulawesi Selatan, Indonesia</label>
+										<p>Sangat bagus. Kami telah melihat hasil yang luar biasa. Ini benar-benar menghemat waktu dan tenaga saya. Technology ERM persis seperti yang kurang dari bisnis kami. Saya kagum dengan kualitas ERM Technology .</p>
 									</div>
 								</div>
 								<div class="carousel-item">
 									<div class="testimonials_grid text-center">
-										<h3>Esmeralda
+										<h3>Aisyah Icha Yuniar
 											<span>Customer</span>
 										</h3>
-										<label>United States</label>
-										<p>Maecenas interdum, metus vitae tincidunt porttitor, magna quam egestas sem, ac scelerisque nisl nibh vel lacus.
-											Proin eget gravida odio. Donec ullamcorper est eu accumsan cursus.</p>
+										<label>Kalimantan, Indonesia</label>
+										<p>Persis seperti yang saya cari selama ini. Ini benar-benar tidak bisa dipercaya! Terima kasih telah membuatnya tanpa rasa sakit, menyenangkan, dan yang terpenting, bebas repot! ERM Technology sangat membantu bisnis kami.</p>
 									</div>
 								</div>
 								<div class="carousel-item">
 									<div class="testimonials_grid text-center">
-										<h3>Gretchen
+										<h3>Latika Kusmawati
 											<span>Customer</span>
 										</h3>
-										<label>United States</label>
-										<p>Maecenas interdum, metus vitae tincidunt porttitor, magna quam egestas sem, ac scelerisque nisl nibh vel lacus.
-											Proin eget gravida odio. Donec ullamcorper est eu accumsan cursus.</p>
+										<label>Sukabumi, Indonesia</label>
+										<p>Saya suka ERM Technology. Anda tidak akan menyesalinya. Saya memberikan setidaknya niali 90 untuk ERM Technology.</p>
 									</div>
 								</div>
 								<a class="carousel-control-prev test" href="#carouselExampleControls" role="button" data-slide="prev">
@@ -1217,7 +1214,7 @@
 							<h4 class="sub-tittle-w3layouts my-lg-4 my-3">Satisfaction Guaranteed</h4>
 							<p>Garansi pelayanan dan produk terbaik dari ERM Technology.</p>
 							<p>
-								<a href="shop.html" class="btn btn-sm animated-button gibson-three mt-4">Shop Now</a>
+								<a href="/shop" class="btn btn-sm animated-button gibson-three mt-4">Shop Now</a>
 							</p>
 						</div>
 						<!-- /.col-lg-4 -->
@@ -1229,7 +1226,7 @@
 							<h4 class="sub-tittle-w3layouts my-lg-4 my-3">Fast Shipping</h4>
 							<p>Proses pengemasan dan pengiriman cepat sesuai harapan anda.</p>
 							<p>
-								<a href="shop.html" class="btn btn-sm animated-button gibson-three mt-4">Shop Now</a>
+								<a href="/shop" class="btn btn-sm animated-button gibson-three mt-4">Shop Now</a>
 							</p>
 						</div>
 						<!-- /.col-lg-4 -->
@@ -1241,7 +1238,7 @@
 							<h4 class="sub-tittle-w3layouts my-lg-4 my-3">Subscribe Disc</h4>
 							<p>Langganan newsletter untuk diskon dan penawaran menarik dari ERM Technology.</p>
 							<p>
-								<a href="shop.html" class="btn btn-sm animated-button gibson-three mt-4">Shop Now</a>
+								<a href="/shop" class="btn btn-sm animated-button gibson-three mt-4">Shop Now</a>
 							</p>
 						</div>
 						<!-- /.col-lg-4 -->
@@ -1314,9 +1311,10 @@
 				</div>
 				<div class="modal-body text-center p-5 mx-auto mw-100">
 					<h6>Join our newsletter and get</h6>
-					<h3>50% Off for your first Pair of Eye wear</h3>
+					<h3>Up to 50% Off for your first order</h3>
 					<div class="login newsletter">
-						<form action="#" method="post">
+						<form action="{{ url('subscribe') }}" method="POST">
+							{{ csrf_field() }}
 							<div class="form-group">
 								<label class="mb-2">Email address</label>
 								<input type="email" class="form-control" id="exampleInputEmail2" aria-describedby="emailHelp" placeholder="" required="">

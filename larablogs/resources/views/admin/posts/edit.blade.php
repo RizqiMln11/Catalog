@@ -80,9 +80,7 @@
 
 							<div class="form-group">
 								<label for="content"> content </label>
-								<textarea name="content" id="content" cols="50" rows="5" class="form-control">
-									{{ $post->content }}
-								</textarea>
+								<textarea name="content" id="content" cols="50" rows="20" class="form-control">{{ $post->content }}</textarea>
 							</div>
 
 							<div class="form-group"> 
