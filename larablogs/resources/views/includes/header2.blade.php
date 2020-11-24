@@ -97,7 +97,7 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav nav-mega mx-auto">
-                <li class="nav-item active">
+                <li class="nav-item @if($_SERVER['REQUEST_URI'] == '/') active @endif">
                     <a class="nav-link ml-lg-0" href="/">Dashboard
                         <span class="sr-only">(current)</span>
                     </a>
@@ -244,8 +244,8 @@
                         </li>
                     </ul>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="contact.html">Contact</a>
+                <li class="nav-item @if($_SERVER['REQUEST_URI'] == '/contact') active @endif">
+                    <a class="nav-link" href="/contact">Contact</a>
                 </li>
             </ul>
 

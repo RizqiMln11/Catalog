@@ -28,7 +28,8 @@ class FrontEndController extends Controller
         $catAll = Category::orderBy('created_at', 'asc')->take(10)->get();
         $pst = Post::orderBy('created_at', 'desc')->take(5)->get();
         $sixthpost = Post::orderBy('created_at', 'desc')->take(10)->get();
-        return view('index2', compact('post', $post, 'limit', $limit, $full, 'full', $pst, 'pst', $sixthpost, 'sixthpost', 'catAll', $catAll))
+        $pstEditorPick = Post::inRandomOrder()->take(2)->get();
+        return view('index2', compact('post', $post, 'limit', $limit, $full, 'full', $pst, 'pst', $sixthpost, 'sixthpost', 'catAll', $catAll, 'pstEditorPick', $pstEditorPick))
                     ->with('profile', Profile::first())
                     ->with('setting', Setting::first())
                     ->with('title', Setting::first()->site_name)
@@ -91,8 +92,12 @@ class FrontEndController extends Controller
         $setting = Setting::all();
         $profile = Profile::all();
         $sixthpost = Post::orderBy('created_at', 'desc')->take(5)->get();
+        $catAll = Category::orderBy('created_at', 'asc')->take(10)->get();
+        $pst = Post::orderBy('created_at', 'desc')->take(5)->get();
 
-             return view('contact', compact($sixthpost, 'sixthpost'))->with('settings', Setting::first())
+             return view('contact2', compact($sixthpost, 'sixthpost',$catAll,'catAll',$pst, 'pst'))
+                                    ->with('settings', Setting::first())
+                                    ->with('setting', Setting::first())
                                    ->with('profile', Profile::first())
                                    ->with('categories', Category::take(4)->get());
     }
