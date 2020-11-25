@@ -1,10 +1,3 @@
-<!--
-	Author: W3layouts
-	Author URL: http://w3layouts.com
-	License: Creative Commons Attribution 3.0 Unported
-	License URL: http://creativecommons.org/licenses/by/3.0/
--->
-
 <!DOCTYPE html>
 <html lang="zxx">
 
@@ -13,9 +6,9 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta charset="utf-8">
 	<meta name="author" content="Intprism Technology, info@intprism.com">
-	<meta name="keywords" content="Disini keyword untuk seo" />
-	<meta name="description" content="Disini description biar tampil di search engine bagus">
-	<link rel="shortcut icon" href="newcatalog/images/logo.png" type="image/x-icon">
+	<meta name="keywords" content="{{ $title }}" />
+	<meta name="description" content="Kami memproduksi dekorasi ruang berupa Neon Flex Sign dengan kategori {{ $title }} yang ditujukan untuk meningkatkan branding suatu toko atau usaha.">
+	<link rel="shortcut icon" href="{{asset('newcatalog/images/logo.png')}}" type="image/x-icon">
 	<script>
 		addEventListener("load", function () {
 			setTimeout(hideURLbar, 0);
@@ -46,7 +39,7 @@
 		<!-- header -->
 		@include('includes.header2')
 		<!-- banner -->
-		<div class="banner_inner">
+		<div class="banner_inner" style="background: url('<?php $bingImage = file_get_contents('https://www.bing.com/HPImageArchive.aspx?format=js&idx=0&n=1&mkt=en-US');$bingImage = json_decode($bingImage, true); echo "https://www.bing.com/".$bingImage['images'][0]['url']; ?>')no-repeat 0px -73px !important;">
 			<div class="services-breadcrumb">
 				<div class="inner_breadcrumb">
 

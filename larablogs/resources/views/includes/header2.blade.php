@@ -12,7 +12,9 @@
             <h1 class="logo-w3layouts">
                 <a class="navbar-brand" href="/">
                     <img src="{{asset('newcatalog/images/logo.png')}}" style="height: 1em;">
-                   {{$setting->site_name}} </a>
+                   {{$setting->site_name}}
+                   <img src="{{asset('newcatalog/images/logo2.png')}}" style="height: 1em;">
+                </a>
             </h1>
         </div>
 
@@ -42,7 +44,8 @@
                 <div class="wrap">
                     <h5 class="text-center mb-4">Login Now</h5>
                     <div class="login p-5 bg-dark mx-auto mw-100">
-                        <form action="#" method="post">
+                        <form method="POST" action="{{ route('login') }}">
+                                    @csrf
                             <div class="form-group">
                                 <label class="mb-2">Email address</label>
                                 <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="" required="">
@@ -158,7 +161,6 @@
                                 @endforeach
                             </div>
                             <hr>
-                            <div class="text-center"><a href="/shop">View More Category</a></div>
                         </li>
                     </ul>
                 </li>

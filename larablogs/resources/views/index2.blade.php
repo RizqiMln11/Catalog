@@ -6,9 +6,9 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta charset="utf-8">
 	<meta name="author" content="Intprism Technology, info@intprism.com">
-	<meta name="keywords" content="Disini keyword untuk seo" />
-	<meta name="description" content="Disini description biar tampil di search engine bagus">
-	<link rel="shortcut icon" href="newcatalog/images/logo.png" type="image/x-icon">
+	<meta name="keywords" content="ERM Technology | Neon Flex Sign" />
+	<meta name="description" content="Kami memproduksi dekorasi ruang berupa Neon Flex Sign yang ditujukan untuk meningkatkan branding suatu toko atau usaha.">
+	<link rel="shortcut icon" href="{{asset('newcatalog/images/logo.png')}}" type="image/x-icon">
 	<script>
 		addEventListener("load", function () {
 			setTimeout(hideURLbar, 0);
@@ -39,6 +39,45 @@
 		<!-- banner -->
 		<div class="banner">
 			<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+				<style>
+					<?php
+						$pstSlider1 = $pstSlider::inRandomOrder()->first();
+						$pstSlider2 = $pstSlider::inRandomOrder()->first();
+						$pstSlider3 = $pstSlider::inRandomOrder()->first();
+						$pstSlider4 = $pstSlider::inRandomOrder()->first();
+					?>
+					.carousel-item {
+						background: -webkit-linear-gradient(rgba(23, 22, 23, 0.2), rgba(23, 22, 23, 0.5)), url(<?php echo $pstSlider1->featured ?>) no-repeat;
+						background: -moz-linear-gradient(rgba(23, 22, 23, 0.2), rgba(23, 22, 23, 0.5)), url(<?php echo $pstSlider1->featured ?>) no-repeat;
+						background: -ms-linear-gradient(rgba(23, 22, 23, 0.2), rgba(23, 22, 23, 0.5)), url(<?php echo $pstSlider1->featured ?>) no-repeat;
+						background: linear-gradient(rgba(23, 22, 23, 0.2), rgba(23, 22, 23, 0.5)), url(<?php echo $pstSlider1->featured ?>) no-repeat;
+						background-size: cover;
+					}
+
+					.carousel-item.item2 {
+						background: -webkit-linear-gradient(rgba(23, 22, 23, 0.2), rgba(23, 22, 23, 0.5)), url(<?php echo $pstSlider2->featured ?>) no-repeat;
+						background: -moz-linear-gradient(rgba(23, 22, 23, 0.2), rgba(23, 22, 23, 0.5)), url(<?php echo $pstSlider2->featured ?>) no-repeat;
+						background: -ms-linear-gradient(rgba(23, 22, 23, 0.2), rgba(23, 22, 23, 0.5)), url(<?php echo $pstSlider2->featured ?>) no-repeat;
+						background: linear-gradient(rgba(23, 22, 23, 0.2), rgba(23, 22, 23, 0.5)), url(<?php echo $pstSlider2->featured ?>) no-repeat;
+						background-size: cover;
+					}
+
+					.carousel-item.item3 {
+						background: -webkit-linear-gradient(rgba(23, 22, 23, 0.2), rgba(23, 22, 23, 0.5)), url(<?php echo $pstSlider3->featured ?>) no-repeat;
+						background: -moz-linear-gradient(rgba(23, 22, 23, 0.2), rgba(23, 22, 23, 0.5)), url(<?php echo $pstSlider3->featured ?>) no-repeat;
+						background: -ms-linear-gradient(rgba(23, 22, 23, 0.2), rgba(23, 22, 23, 0.5)), url(<?php echo $pstSlider3->featured ?>) no-repeat;
+						background: linear-gradient(rgba(23, 22, 23, 0.2), rgba(23, 22, 23, 0.5)), url(<?php echo $pstSlider3->featured ?>) no-repeat;
+						background-size: cover;
+					}
+
+					.carousel-item.item4 {
+						background: -webkit-linear-gradient(rgba(23, 22, 23, 0.2), rgba(23, 22, 23, 0.5)), url(<?php echo $pstSlider4->featured ?>) no-repeat;
+						background: -moz-linear-gradient(rgba(23, 22, 23, 0.2), rgba(23, 22, 23, 0.5)), url(<?php echo $pstSlider4->featured ?>) no-repeat;
+						background: -ms-linear-gradient(rgba(23, 22, 23, 0.2), rgba(23, 22, 23, 0.5)), url(<?php echo $pstSlider4->featured ?>) no-repeat;
+						background: linear-gradient(rgba(23, 22, 23, 0.2), rgba(23, 22, 23, 0.5)), url(<?php echo $pstSlider4->featured ?>) no-repeat;
+						background-size: cover;
+					}
+				</style>
 				<ol class="carousel-indicators">
 					<li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
 					<li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
@@ -48,36 +87,36 @@
 				<div class="carousel-inner" role="listbox">
 					<div class="carousel-item active">
 						<div class="carousel-caption text-center">
-							<h3>Men’s eyewear
-								<span>Cool summer sale 50% off</span>
+							<h3><?php echo $pstSlider1->title ?>
+								<span>Dapatkan diskon up to 20%</span>
 							</h3>
-							<a href="/shop" class="btn btn-sm animated-button gibson-three mt-4">Shop Now</a>
+							<a href="ctalog/<?php echo $pstSlider1->slug ?>" class="btn btn-sm animated-button gibson-three mt-4">Shop Now</a>
 						</div>
 					</div>
 					<div class="carousel-item item2">
 						<div class="carousel-caption text-center">
-							<h3>Women’s eyewear
-								<span>Want to Look Your Best?</span>
+							<h3><?php echo $pstSlider2->title ?>
+								<span>Produk yang anda cari?</span>
 							</h3>
-							<a href="/shop" class="btn btn-sm animated-button gibson-three mt-4">Shop Now</a>
+							<a href="catalog/<?php echo $pstSlider2->slug ?>" class="btn btn-sm animated-button gibson-three mt-4">Shop Now</a>
 
 						</div>
 					</div>
 					<div class="carousel-item item3">
 						<div class="carousel-caption text-center">
-							<h3>Men’s eyewear
-								<span>Cool summer sale 50% off</span>
+							<h3><?php echo $pstSlider3->title ?>
+								<span>Kualitas terbaik di kelasnya</span>
 							</h3>
-							<a href="/shop" class="btn btn-sm animated-button gibson-three mt-4">Shop Now</a>
+							<a href="catalog/<?php echo $pstSlider3->slug ?>" class="btn btn-sm animated-button gibson-three mt-4">Shop Now</a>
 
 						</div>
 					</div>
 					<div class="carousel-item item4">
 						<div class="carousel-caption text-center">
-							<h3>Women’s eyewear
-								<span>Want to Look Your Best?</span>
+							<h3><?php echo $pstSlider4->title ?>
+								<span>Produk yang sedang anda cari?</span>
 							</h3>
-							<a href="/shop" class="btn btn-sm animated-button gibson-three mt-4">Shop Now</a>
+							<a href="catalog/<?php echo $pstSlider4->slug ?>" class="btn btn-sm animated-button gibson-three mt-4">Shop Now</a>
 						</div>
 					</div>
 				</div>
@@ -156,10 +195,10 @@
 				<!--/meddle-->
 				<div class="row">
 					<div class="col-md-12 middle-slider my-4">
-						<div class="middle-text-info ">
+						<div class="middle-text-info " style="background: url('<?php $bingImage = file_get_contents('https://www.bing.com/HPImageArchive.aspx?format=js&idx=0&n=1&mkt=en-US');$bingImage = json_decode($bingImage, true); echo "https://www.bing.com/".$bingImage['images'][0]['url']; ?>') no-repeat 0px 0px; !important">
 
 							<h3 class="tittle-w3layouts two text-center my-lg-4 mt-3">Summer Flash sale</h3>
-							<div class="simply-countdown-custom" id="simply-countdown-custom"></div>
+							<div class="text-center"><a href="{{route('contact')}}" class="btn btn-sm animated-button gibson-three mt-4" style="font-weight: bold;">Contact US</a></div>
 
 						</div>
 					</div>
@@ -302,7 +341,7 @@
 							<h4 class="sub-tittle-w3layouts my-lg-4 my-3">Satisfaction Guaranteed</h4>
 							<p>Garansi pelayanan dan produk terbaik dari ERM Technology.</p>
 							<p>
-								<a href="/shop" class="btn btn-sm animated-button gibson-three mt-4">Shop Now</a>
+								<a href="#" class="btn btn-sm animated-button gibson-three mt-4">Shop Now</a>
 							</p>
 						</div>
 						<!-- /.col-lg-4 -->
@@ -314,19 +353,19 @@
 							<h4 class="sub-tittle-w3layouts my-lg-4 my-3">Fast Shipping</h4>
 							<p>Proses pengemasan dan pengiriman cepat sesuai harapan anda.</p>
 							<p>
-								<a href="/shop" class="btn btn-sm animated-button gibson-three mt-4">Shop Now</a>
+								<a href="#" class="btn btn-sm animated-button gibson-three mt-4">Shop Now</a>
 							</p>
 						</div>
 						<!-- /.col-lg-4 -->
 						<div class="col-lg-4 bottom-sub-grid text-center">
 							<div class="bt-icon">
-								<span class="far fa-envelope-o"></span>
+								<span class="far fa-envelope"></span>
 							</div>
 
 							<h4 class="sub-tittle-w3layouts my-lg-4 my-3">Subscribe Disc</h4>
 							<p>Langganan newsletter untuk diskon dan penawaran menarik dari ERM Technology.</p>
 							<p>
-								<a href="/shop" class="btn btn-sm animated-button gibson-three mt-4">Shop Now</a>
+								<a href="#" class="btn btn-sm animated-button gibson-three mt-4">Shop Now</a>
 							</p>
 						</div>
 						<!-- /.col-lg-4 -->
@@ -461,7 +500,7 @@
 	</script>
 	<!-- carousel -->
 	<!-- Count-down -->
-	<script src="{{ asset('newcatalog/js/simplyCountdown.js')}}"></script>
+	<!-- <script src="{{ asset('newcatalog/js/simplyCountdown.js')}}"></script>
 	<link href="{{ asset('newcatalog/css/simplyCountdown.css')}}" rel='stylesheet' type='text/css' />
 	<script>
 		var d = new Date();
@@ -470,7 +509,7 @@
 			month: d.getMonth() + 2,
 			day: 25
 		});
-	</script>
+	</script> -->
 	<!--// Count-down -->
 	<script src="{{ asset('newcatalog/js/owl.carousel.js')}}"></script>
 	<script>

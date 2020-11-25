@@ -1,10 +1,3 @@
-<!--
-	Author: W3layouts
-	Author URL: http://w3layouts.com
-	License: Creative Commons Attribution 3.0 Unported
-	License URL: http://creativecommons.org/licenses/by/3.0/
--->
-
 <!DOCTYPE html>
 <html lang="zxx">
 
@@ -13,9 +6,9 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta charset="utf-8">
 	<meta name="author" content="Intprism Technology, info@intprism.com">
-	<meta name="keywords" content="Disini keyword untuk seo" />
-	<meta name="description" content="Disini description biar tampil di search engine bagus">
-	<link rel="shortcut icon" href="newcatalog/images/logo.png" type="image/x-icon">
+	<meta name="keywords" content="{{ $post->title }}" />
+	<meta name="description" content="Kami memproduksi dekorasi ruang berupa Neon Flex Sign dengan produk {{ $post->title }} yang ditujukan untuk meningkatkan branding suatu toko atau usaha.">
+	<link rel="shortcut icon" href="{{asset('newcatalog/images/logo.png')}}" type="image/x-icon">
 	<script>
 		addEventListener("load", function () {
 			setTimeout(hideURLbar, 0);
@@ -46,7 +39,7 @@
 		<!-- header -->
 		@include('includes.header2')
 		<!-- banner -->
-		<div class="banner_inner">
+		<div class="banner_inner" style="background: url('<?php $bingImage = file_get_contents('https://www.bing.com/HPImageArchive.aspx?format=js&idx=0&n=1&mkt=en-US');$bingImage = json_decode($bingImage, true); echo "https://www.bing.com/".$bingImage['images'][0]['url']; ?>')no-repeat 0px -73px !important;">
 			<div class="services-breadcrumb">
 				<div class="inner_breadcrumb">
 
@@ -55,7 +48,7 @@
 							<a href="index.html">Home</a>
 							<i>|</i>
 						</li>
-						<li>Single Page</li>
+						<li>{{ $post->title }}</li>
 					</ul>
 				</div>
 			</div>
@@ -194,16 +187,15 @@
 											</div>
 											<div class="tab3">
 					
-												<div class="single_page">
-													<h6>Irayz Butterfly Sunglasses  (Black)</h6>
-													<p>Lorem ipsum dolor sit amet, consectetur adipisicing elPellentesque vehicula augue eget nisl ullamcorper, molestie
-														blandit ipsum auctor. Mauris volutpat augue dolor.Consectetur adipisicing elit, sed do eiusmod tempor incididunt
-														ut lab ore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco. labore et dolore
-														magna aliqua.</p>
-													<p class="para">Lorem ipsum dolor sit amet, consectetur adipisicing elPellentesque vehicula augue eget nisl ullamcorper, molestie
-														blandit ipsum auctor. Mauris volutpat augue dolor.Consectetur adipisicing elit, sed do eiusmod tempor incididunt
-														ut lab ore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco. labore et dolore
-														magna aliqua.</p>
+												<div class="single_page" style="width: 100%">
+													<h6>Tata Cara Pemesanan {{$post->title}}</h6>
+													<p>Untuk melakukan pemesanan katalog kami silahkan ikuti langkah-langkah berikut ini:</p>
+													<p class="pre">
+														1. Tinggalkan catatan pada bagian pesan. <br>
+														2. Silahkan pilih jumlah pesanan.<br>
+														3. Klik tombol pesan via WhatsApp.<br>
+														Setelah itu anda akan diarahkan otomatis ke customer support kami untuk pemrosesan pesanan {{$post->title}}.
+													</p>
 												</div>
 											</div>
 										</div>

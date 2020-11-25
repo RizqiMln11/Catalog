@@ -27,14 +27,16 @@ class FrontEndController extends Controller
         $setting = Setting::all();
         $limit = Post::orderBy('created_at', 'desc')->first();
         $full = Category::orderBy('created_at', 'asc')->take(3)->get();
-        $catAll = Category::orderBy('created_at', 'asc')->take(10)->get();
+        // $catAll = Category::orderBy('created_at', 'asc')->take(10)->get();
+        $catAll = Category::all();
         $pst = Post::orderBy('created_at', 'desc')->take(5)->get();
         $sixthpost = Post::orderBy('created_at', 'desc')->take(10)->get();
         $pstEditorPick = Post::inRandomOrder()->take(2)->get();
         $pstPrice = new PostPrice;
         $prices = new price;
         $pstHomePage = Post::inRandomOrder()->take(8)->get();
-        return view('index2', compact('post', $post, 'limit', $limit, $full, 'full', $pst, 'pst', $sixthpost, 'sixthpost', 'catAll', $catAll, 'pstEditorPick', $pstEditorPick, 'pstPrice', $pstPrice, 'prices', $prices,'pstHomePage', $pstHomePage))
+        $pstSlider = new Post;
+        return view('index2', compact('post', $post, 'limit', $limit, $full, 'full', $pst, 'pst', $sixthpost, 'sixthpost', 'catAll', $catAll, 'pstEditorPick', $pstEditorPick, 'pstPrice', $pstPrice, 'prices', $prices,'pstHomePage', $pstHomePage, 'pstSlider', $pstSlider))
                     ->with('profile', Profile::first())
                     ->with('setting', Setting::first())
                     ->with('title', Setting::first()->site_name)

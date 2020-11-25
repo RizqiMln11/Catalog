@@ -6,38 +6,16 @@
 						<h3>About Us</h3>
 					</div>
 					<div class="footer-text">
-						<p>Curabitur non nulla sit amet nislinit tempus convallis quis ac lectus. lac inia eget consectetur sed, convallis at
-							tellus. Nulla porttitor accumsana tincidunt.</p>
+						<p>Kami memproduksi dekorasi ruang berupa Neon Flex Sign yang ditujukan untuk meningkatkan branding suatu toko atau usaha.</p>
 						<ul class="footer-social text-left mt-lg-4 mt-3">
-
 							<li class="mx-2">
-								<a href="#">
-									<span class="fab fa-facebook-f"></span>
+								<a href="https://instagram.com/ermneonflex">
+									<span class="fab fa-instagram"></span>
 								</a>
 							</li>
 							<li class="mx-2">
-								<a href="#">
-									<span class="fab fa-twitter"></span>
-								</a>
-							</li>
-							<li class="mx-2">
-								<a href="#">
-									<span class="fab fa-google-plus-g"></span>
-								</a>
-							</li>
-							<li class="mx-2">
-								<a href="#">
-									<span class="fab fa-linkedin-in"></span>
-								</a>
-							</li>
-							<li class="mx-2">
-								<a href="#">
-									<span class="fas fa-rss"></span>
-								</a>
-							</li>
-							<li class="mx-2">
-								<a href="#">
-									<span class="fab fa-vk"></span>
+								<a href="mailto:{{ $setting->contact_email }}">
+									<span class="fas fa-envelope"></span>
 								</a>
 							</li>
 						</ul>
@@ -65,19 +43,10 @@
 					</div>
 					<ul class="links">
 						<li>
-							<a href="/">Home</a>
+							<a href="{{route('index')}}">Home</a>
 						</li>
 						<li>
-							<a href="about.html">About</a>
-						</li>
-						<li>
-							<a href="404.html">Category</a>
-						</li>
-						<li>
-							<a href="/shop">Shop</a>
-						</li>
-						<li>
-							<a href="contact.html">Contact Us</a>
+							<a href="{{route('contact')}}">Contact Us</a>
 						</li>
 					</ul>
 				</div>

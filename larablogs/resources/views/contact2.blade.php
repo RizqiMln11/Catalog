@@ -35,7 +35,7 @@
 		<!-- header -->
 		@include('includes.header2')
         <!-- banner -->
-		<div class="banner_inner" style="background: url(newcatalog/images/banner-mid.jpg)no-repeat 0px -73px !important;">
+		<div class="banner_inner" style="background: url('<?php $bingImage = file_get_contents('https://www.bing.com/HPImageArchive.aspx?format=js&idx=0&n=1&mkt=en-US');$bingImage = json_decode($bingImage, true); echo "https://www.bing.com/".$bingImage['images'][0]['url']; ?>')no-repeat 0px -73px !important;">
 			<div class="services-breadcrumb">
 				<div class="inner_breadcrumb">
 
