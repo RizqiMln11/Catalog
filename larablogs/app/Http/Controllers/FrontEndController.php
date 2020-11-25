@@ -47,16 +47,23 @@ class FrontEndController extends Controller
     {
         $post = Post::where('slug', $slug)->first();
 
-         $profile = Profile::all();
-         $sixthpost = Post::orderBy('created_at', 'desc')->take(5)->get();
+        $pstPrice = PostPrice::where('posts_id', $post->id)->first();
 
+        $prices =  price::where('id', $pstPrice->prices_id)->first();
+
+        $profile = Profile::all();
+        $postPluck = Post::where('id', '!=', $post->id)->take(5)->get();
+        $catAll = Category::orderBy('created_at', 'asc')->take(10)->get();
         $next_id = Post::where('id', '>', $post->id)->min('id');
         $prev_id = Post::where('id', '<', $post->id)->max('id');
 
-        return view('single', compact($sixthpost, 'sixthpost'))->with('post', $post)
+        $newpstPrice = new PostPrice;
+        $newprices = new price;
+        // dd($prices);
+        return view('single2', compact($postPluck, 'postPluck', $newpstPrice, 'newpstPrice', $newprices, 'newprices', 'catAll', $catAll, 'prices', $prices,))->with('post', $post)
                     ->with('profile', Profile::first())
                     ->with('title', $post->title)
-                    ->with('settings', Setting::first())
+                    ->with('setting', Setting::first())
                     ->with('categories', Category::take(4)->get())
                     ->with('next', Post::find($next_id))
                     ->with('prev', Post::find($prev_id))
@@ -66,28 +73,34 @@ class FrontEndController extends Controller
 
     public function category($id)
     {
+        $catAll = Category::orderBy('created_at', 'asc')->take(10)->get();
         $category = Category::find($id);
         $profile = Profile::all();
         $sixthpost = Post::orderBy('created_at', 'desc')->take(5)->get();
+        $newpstPrice = new PostPrice;
+        $newprices = new price;
 
-        return view('category', compact($sixthpost, 'sixthpost'))->with('category', $category)
+        return view('category2', compact($sixthpost, 'sixthpost', $newpstPrice, 'newpstPrice', $newprices, 'newprices', 'catAll', $catAll))->with('category', $category)
                                ->with('title', $category->name)
                                 ->with('profile', Profile::first())
-                               ->with('settings', Setting::first())
+                               ->with('setting', Setting::first())
                                ->with('categories', Category::take(4)->get());
     }
 
 
     public function tag($id)
     {
+        $catAll = Category::orderBy('created_at', 'asc')->take(10)->get();
         $tag = Tag::find($id);
+        $newpstPrice = new PostPrice;
+        $newprices = new price;
         $profile = Profile::all();
         $sixthpost = Post::orderBy('created_at', 'desc')->take(5)->get();
 
-             return view('tag', compact($sixthpost, 'sixthpost'))->with('tag', $tag)
+             return view('tag2', compact($sixthpost, 'sixthpost', $newpstPrice, 'newpstPrice', $newprices, 'newprices', 'catAll', $catAll))->with('tag', $tag)
                                ->with('title', $tag->tag)
                                ->with('profile', Profile::first())
-                               ->with('settings', Setting::first())
+                               ->with('setting', Setting::first())
                                ->with('categories', Category::take(4)->get());
     }
 

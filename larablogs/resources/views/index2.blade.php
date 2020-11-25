@@ -97,7 +97,7 @@
 	<section class="banner-bottom-wthreelayouts py-lg-5 py-3">
 		<div class="container-fluid">
 			<div class="inner-sec-shop px-lg-4 px-3">
-				<h3 class="tittle-w3layouts my-lg-4 my-4">New Arrivals for you </h3>
+				<h3 class="tittle-w3layouts my-lg-4 my-4">Catalog Terbaru </h3>
 				<div class="row">
 					<!-- /womens -->
 					@foreach($pstHomePage as $pstHomePg)
@@ -108,7 +108,7 @@
 									<img src="{{asset($pstHomePg->featured)}}" class="img-fluid"  style="height: 210px !important;">
 									<div class="men-cart-pro">
 										<div class="inner-men-cart-pro">
-											<a href="catalog/{{$pstHomePg->slug}}" class="link-product-add-cart">Quick View</a>
+											<a href="catalog/{{$pstHomePg->slug}}" class="link-product-add-cart">Lihat Detail</a>
 										</div>
 									</div>
 									<span class="product-new-top">New</span>
@@ -384,7 +384,7 @@
 	<!-- //footer -->
 
 	<!--jQuery-->
-	<script src="newcatalog/js/jquery-2.2.3.min.js"></script>
+	<script src="{{ asset('newcatalog/js/jquery-2.2.3.min.js')}}"></script>
 	<!-- newsletter modal -->
 	<!-- Modal -->
 	<!-- Modal -->

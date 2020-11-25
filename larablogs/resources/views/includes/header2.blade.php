@@ -119,7 +119,7 @@
                                     <ul>
                                         @foreach ($catAll as $ctg)
                                         <li class="">
-                                            <a href="#">{{$ctg->name}}</a>
+                                            <a href="{{ route('category.single', ['id' => $ctg->id ]) }}">{{$ctg->name}}</a>
                                         </li>
                                         @endforeach
                                     </ul>
@@ -136,7 +136,7 @@
                                     <div class="col-md-4 media-list span4 text-left">
                                         <h5 class="tittle-w3layouts-sub"> {{$ctg->name}} </h5>
                                         <div class="media-mini mt-3">
-                                            <a href="#">
+                                            <a href="{{ route('category.single', ['id' => $ctg->id ]) }}">
                                                 <img src="{{ asset($ctg->gambar)}}" class="img-fluid" alt="">
                                             </a>
                                         </div>
@@ -146,7 +146,7 @@
                                     <div class="col-md-4 media-list span4 text-left">
                                         <h5 class="tittle-w3layouts-sub"> {{$ctg->name}} </h5>
                                         <div class="media-mini mt-3">
-                                            <a href="#">
+                                            <a href="{{ route('category.single', ['id' => $ctg->id ]) }}">
                                                 <img src="{{ asset($ctg->gambar)}}" class="img-fluid" alt="">
                                             </a>
                                         </div>

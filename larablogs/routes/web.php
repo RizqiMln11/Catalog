@@ -25,7 +25,7 @@ Route::get('exception/index', 'ExceptionController@index');
 	'as' => 'index'
      ]);
 
-	Route::get('/post/{slug}', [
+	Route::get('/catalog/{slug}', [
 	'uses' => 'FrontEndController@singlePost',
 
 	'as' => 'post.single'
