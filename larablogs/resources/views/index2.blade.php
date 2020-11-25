@@ -9,6 +9,7 @@
 	<meta name="keywords" content="ERM Technology | Neon Flex Sign" />
 	<meta name="description" content="Kami memproduksi dekorasi ruang berupa Neon Flex Sign yang ditujukan untuk meningkatkan branding suatu toko atau usaha.">
 	<link rel="shortcut icon" href="{{asset('newcatalog/images/logo.png')}}" type="image/x-icon">
+	<meta property="og:image" content="{{asset('newcatalog/images/logo.png')}}" />
 	<script>
 		addEventListener("load", function () {
 			setTimeout(hideURLbar, 0);
@@ -161,10 +162,18 @@
 												</h4>
 												<div class="grid-price mt-2">
 													@php
-														$pricing = $pstPrice::where('posts_id', $pstHomePg->id)->first();
-														$pricing = $prices::where('id', $pricing->prices_id)->first();
+														try {
+															$pricing = $pstPrice::where('posts_id', $pstHomePg->id)->first();
+															$pricing = $prices::where('id', $pricing->prices_id)->first();
 													@endphp
 													<span class="money ">{{ "Rp " . number_format((float)$pricing->harga_diskon,2,',','.')}}</span>
+													@php
+														} catch (\Throwable $th) {
+													@endphp
+													<span class="money ">Rp -</span>
+													@php
+														}
+													@endphp
 												</div>
 											</div>
 											<ul class="stars">
@@ -234,10 +243,18 @@
 																</h4>
 																<div class="grid-price mt-2">
 																	@php
-																		$pricing = $pstPrice::where('posts_id', $postfive->id)->first();
-																		$pricing = $prices::where('id', $pricing->prices_id)->first();
+																		try {
+																			$pricing = $pstPrice::where('posts_id', $postfive->id)->first();
+																			$pricing = $prices::where('id', $pricing->prices_id)->first();
 																	@endphp
 																	<span class="money ">{{ "Rp " . number_format((float)$pricing->harga_diskon,2,',','.')}}</span>
+																	@php
+																		} catch (\Throwable $th) {
+																	@endphp
+																	<span class="money ">Rp -</span>
+																	@php
+																		}
+																	@endphp
 																</div>
 															</div>
 															<ul class="stars">

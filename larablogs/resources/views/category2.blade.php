@@ -9,6 +9,7 @@
 	<meta name="keywords" content="{{ $title }}" />
 	<meta name="description" content="Kami memproduksi dekorasi ruang berupa Neon Flex Sign dengan kategori {{ $title }} yang ditujukan untuk meningkatkan branding suatu toko atau usaha.">
 	<link rel="shortcut icon" href="{{asset('newcatalog/images/logo.png')}}" type="image/x-icon">
+	<meta property="og:image" content="{{$title->gambar ?? asset('newcatalog/images/logo.png')}}" />
 	<script>
 		addEventListener("load", function () {
 			setTimeout(hideURLbar, 0);
@@ -45,7 +46,7 @@
 
 					<ul class="short">
 						<li>
-							<a href="index.html">Home</a>
+							<a href="/">Home</a>
 							<i>|</i>
 						</li>
 						<li>Category: {{ $title }} </li>
@@ -87,14 +88,22 @@
 														<div class="grid_meta">
 															<div class="product_price">
 																<h4>
-																	<a href={{ route('post.single', ['slug' => $postfive->slug]) }}">{{$postfive->title}} </a>
+																	<a href="{{ route('post.single', ['slug' => $postfive->slug]) }}">{{$postfive->title}} </a>
 																</h4>
 																<div class="grid-price mt-2">
 																	@php
-																		$pricing = $newpstPrice::where('posts_id', $postfive->id)->first();
-																		$pricing = $newprices::where('id', $pricing->prices_id)->first();
+																		try {
+																			$pricing = $pstPrice::where('posts_id', $postfive->id)->first();
+																			$pricing = $prices::where('id', $pricing->prices_id)->first();
 																	@endphp
 																	<span class="money ">{{ "Rp " . number_format((float)$pricing->harga_diskon,2,',','.')}}</span>
+																	@php
+																		} catch (\Throwable $th) {
+																	@endphp
+																	<span class="money ">Rp -</span>
+																	@php
+																		}
+																	@endphp
 																</div>
 															</div>
 															<ul class="stars">

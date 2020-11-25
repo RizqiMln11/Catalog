@@ -1,21 +1,15 @@
-<!--
-	Author: W3layouts
-	Author URL: http://w3layouts.com
-	License: Creative Commons Attribution 3.0 Unported
-	License URL: http://creativecommons.org/licenses/by/3.0/
--->
-
 <!DOCTYPE html>
-<html lang="zxx">
+<html lang="en">
 
 <head>
 	<title>{{$title}} - {{$setting->site_name}}</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta charset="utf-8">
 	<meta name="author" content="Intprism Technology, info@intprism.com">
-	<meta name="keywords" content="Disini keyword untuk seo" />
-	<meta name="description" content="Disini description biar tampil di search engine bagus">
-	<link rel="shortcut icon" href="newcatalog/images/logo.png" type="image/x-icon">
+	<meta name="keywords" content="{{$title}}" />
+	<meta name="description" content="Kami memproduksi dekorasi ruang berupa Neon Flex Sign {{$title}} yang ditujukan untuk meningkatkan branding suatu toko atau usaha.">
+	<link rel="shortcut icon" href="{{asset('newcatalog/images/logo.png')}}" type="image/x-icon">
+	<meta property="og:image" content="{{asset('newcatalog/images/logo.png')}}" />
 	<script>
 		addEventListener("load", function () {
 			setTimeout(hideURLbar, 0);
@@ -52,7 +46,7 @@
 
 					<ul class="short">
 						<li>
-							<a href="index.html">Home</a>
+							<a href="/">Home</a>
 							<i>|</i>
 						</li>
 						<li>Tags: {{ $title }} </li>

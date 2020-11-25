@@ -6,9 +6,10 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta charset="utf-8">
 	<meta name="author" content="Intprism Technology, info@intprism.com">
-	<meta name="keywords" content="Disini keyword untuk seo" />
-	<meta name="description" content="Disini description biar tampil di search engine bagus">
-	<link rel="shortcut icon" href="newcatalog/images/logo.png" type="image/x-icon">
+	<meta name="keywords" content="{{$setting->site_name}} contact us" />
+	<meta name="description" content="Perluinfo lanjut mengenai layanan kami, silahkan hubungi kami melalui form halaman ini.">
+	<link rel="shortcut icon" href="{{asset('newcatalog/images/logo.png')}}" type="image/x-icon">
+	<meta property="og:image" content="{{asset('newcatalog/images/logo.png')}}" />
 	<script>
 		addEventListener("load", function () {
 			setTimeout(hideURLbar, 0);
@@ -137,7 +138,7 @@
 	</section>
 	<div class="contact-map">
 
-		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d100949.24429313939!2d-122.44206553967531!3d37.75102885910819!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80859a6d00690021%3A0x4a501367f076adff!2sSan+Francisco%2C+CA%2C+USA!5e0!3m2!1sen!2sin!4v1472190196783"
+		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3950.0553041237977!2d111.98965131478008!3d-8.0958429941715!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0!2zOMKwMDUnNDUuMCJTIDExMcKwNTknMzAuNiJF!5e0!3m2!1sid!2sid!4v1606306668499!5m2!1sid!2sid"
 		    class="map" style="border:0" allowfullscreen=""></iframe>
 	</div>
 

@@ -50,8 +50,14 @@ class FrontEndController extends Controller
         $post = Post::where('slug', $slug)->first();
 
         $pstPrice = PostPrice::where('posts_id', $post->id)->first();
-
-        $prices =  price::where('id', $pstPrice->prices_id)->first();
+        try {
+            $prices =  price::where('id', $pstPrice->prices_id)->first();
+        } catch (\Throwable $th) {
+            $prices = new \stdClass();;
+            $prices->harga_diskon =  "-";
+            $prices->harga_normal =  "-";
+        }
+        
 
         $profile = Profile::all();
         $postPluck = Post::where('id', '!=', $post->id)->take(5)->get();
@@ -135,6 +141,17 @@ class FrontEndController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+    public function services()
+    {
+        $setting = Setting::first();
+        $catAll = Category::orderBy('created_at', 'asc')->take(10)->get();
+        $pstHomePage = Post::orderBy('created_at', 'desc')->take(4)->get();
+        $pstPrice = new PostPrice;
+        $prices = new price;
+        $pstEditorPick = Post::inRandomOrder()->take(2)->get();
+        return view('services2', compact('setting', $setting, 'catAll', $catAll, 'pstHomePage', $pstHomePage, 'pstPrice', $pstPrice, 'prices', $prices, 'pstEditorPick', $pstEditorPick));
+    }
+
     public function create()
     {
         //

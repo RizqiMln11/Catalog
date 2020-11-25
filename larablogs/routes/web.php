@@ -41,7 +41,13 @@ Route::get('exception/index', 'ExceptionController@index');
 	'uses' => 'FrontEndController@tag',
 
 	'as' => 'tag.single'
-     ]);
+	 ]);
+
+	 Route::get('/services', [
+		'uses' => 'FrontEndController@services',
+	
+		'as' => 'services'
+		 ]);
 
 	Route::get('/results', function(){
 		$posts = \App\Post::where('title','like', '%' . request('query') . '%')->get();

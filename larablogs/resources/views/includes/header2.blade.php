@@ -106,8 +106,8 @@
                         <span class="sr-only">(current)</span>
                     </a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="about.html">Services</a>
+                <li class="nav-item @if($_SERVER['REQUEST_URI'] == '/services') active @endif">
+                    <a class="nav-link" href="{{route('services')}}">Services</a>
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
