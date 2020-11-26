@@ -6,7 +6,7 @@ use App\Tag;
 use App\Profile;
 use App\Post;
 use App\Auth;
-use App\Category;
+use App\category;
 use App\Setting;
 use App\PostPrice;
 use App\price;
@@ -68,14 +68,16 @@ class FrontEndController extends Controller
         $newpstPrice = new PostPrice;
         $newprices = new price;
         // dd($prices);
-        return view('single2', compact($postPluck, 'postPluck', $newpstPrice, 'newpstPrice', $newprices, 'newprices', 'catAll', $catAll, 'prices', $prices,))->with('post', $post)
+        return view('single2', compact('postPluck', $postPluck, 'newpstPrice', $newpstPrice, 'newprices', $newprices,'catAll', $catAll, 'prices', $prices))
+                    ->with('post', $post)
                     ->with('profile', Profile::first())
                     ->with('title', $post->title)
                     ->with('setting', Setting::first())
                     ->with('categories', Category::take(4)->get())
                     ->with('next', Post::find($next_id))
                     ->with('prev', Post::find($prev_id))
-                    ->with('tags', Tag::all());
+                    ->with('tags', Tag::all()
+                );
     }
 
 

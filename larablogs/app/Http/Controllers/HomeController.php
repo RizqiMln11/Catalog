@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Post;
 use Alert;
-use App\Category;
+use App\category;
 use App\User;
 use Illuminate\Http\Request;
 

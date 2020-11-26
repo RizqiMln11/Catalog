@@ -7,7 +7,7 @@ use App\Tag;
 use App\Profile;
 use App\Post;
 use App\Auth;
-use App\Category;
+use App\category;
 use App\Setting;
 
 class ApiFrontController extends Controller

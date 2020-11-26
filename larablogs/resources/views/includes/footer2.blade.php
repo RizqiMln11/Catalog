@@ -71,7 +71,7 @@
 				</div>
 			</div>
 			<div class="copyright-w3layouts mt-4">
-				<p class="copy-right text-center ">&copy; <a href="/">2020 {{$setting->site_name}}</a>. All Rights Reserved
+				<p class="copy-right text-center ">&copy; <a href="/"><?php echo date("Y");?> {{$setting->site_name}}</a>. All Rights Reserved
 					<!-- Developer Company -->
 					<a href="https://bikinkode.com/" style="display:none;"> Develop By: Bikin Kode Indonesia </a>
 					<a href="https://intprism.com/" style="display:none;"> Develop By: Intprism Technology </a>
