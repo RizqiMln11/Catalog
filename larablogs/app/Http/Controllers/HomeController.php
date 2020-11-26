@@ -32,6 +32,6 @@ class HomeController extends Controller
                 ->with('posts_count', Post::all()->count())
                 ->with('trashed_count', Post::onlyTrashed()->get()->count())
                 ->with('users_count', User::all()->count())
-                ->with('categories_count', Category::all()->count());
+                ->with('categories_count', category::all()->count());
     }
 }

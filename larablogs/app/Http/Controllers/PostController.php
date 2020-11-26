@@ -61,7 +61,7 @@ class PostController extends Controller
      */
     public function create()
     {
-        $categories = Category::all();
+        $categories = category::all();
         $tags = Tag::all();
 
         if ($categories->count() == 0 || $tags->count() == 0);
@@ -190,7 +190,7 @@ class PostController extends Controller
 
 
         return view('admin.posts.edit')->with('post', $post)
-                                       ->with('categories', Category::all())
+                                       ->with('categories', category::all())
                                        ->with('tags', Tag::all());
     }
 

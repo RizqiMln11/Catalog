@@ -197,7 +197,7 @@ class ApiController extends Controller
      */
     public function addCtg(Request $request)
     {
-        $category = new Category;
+        $category = new category;
         $category->name = $request->name; 
         $category->gambar = 'uploads/posts/1567479339m1.jpg';
         $category->save();

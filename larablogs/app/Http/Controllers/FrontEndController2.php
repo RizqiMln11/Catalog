@@ -19,13 +19,13 @@ class FrontEndController2 extends Controller
 
         return view('index2')
                     ->with('title', Setting::first()->site_name)
-                    ->with('categories', Category::take(4)->get())
+                    ->with('categories', category::take(4)->get())
                     ->with('first_post', Post::orderBy('created_at', 'desc')->first())
                     ->with('second_post', Post::orderBy('created_at', 'desc')->skip(1)->take(1)->get()->first())
                     ->with('third_post', Post::orderBy('created_at', 'desc')->skip(2)->take(1)->get()->first())
-                    ->with('Ruby_on_trails', Category::find(3))
-                    ->with('saicklpo', Category::find(4))
-                    ->with('mobile_legends', Category::find(1))
+                    ->with('Ruby_on_trails', category::find(3))
+                    ->with('saicklpo', category::find(4))
+                    ->with('mobile_legends', category::find(1))
                     ->with('settings', Setting::first());
     }
 
@@ -40,7 +40,7 @@ class FrontEndController2 extends Controller
         return view('single')->with('post', $post)
                     ->with('title', $post->title)
                     ->with('settings', Setting::first())
-                    ->with('categories', Category::take(4)->get())
+                    ->with('categories', category::take(4)->get())
                     ->with('next', Post::find($next_id))
                     ->with('prev', Post::find($prev_id))
                     ->with('tags', Tag::all());
@@ -49,12 +49,12 @@ class FrontEndController2 extends Controller
 
     public function category($id)
     {
-        $category = Category::find($id);
+        $category = category::find($id);
 
         return view('category')->with('category', $category)
                                ->with('title', $category->name)
                                ->with('settings', Setting::first())
-                               ->with('categories', Category::take(4)->get());
+                               ->with('categories', category::take(4)->get());
     }
 
 
@@ -65,7 +65,7 @@ class FrontEndController2 extends Controller
              return view('tag')->with('tag', $tag)
                                ->with('title', $tag->tag)
                                ->with('settings', Setting::first())
-                               ->with('categories', Category::take(4)->get());
+                               ->with('categories', category::take(4)->get());
     }
 
     /**

@@ -49,7 +49,7 @@ class CategoryController extends Controller
         $featured_new_name = time() . $gambar->getClientOriginalName();
         $gambar->move('uploads/posts', $featured_new_name);
 
-        $category = new Category;
+        $category = new category;
         $category->name = $request->name; 
         $category->gambar = 'uploads/posts/' . $featured_new_name;
         $category->save();

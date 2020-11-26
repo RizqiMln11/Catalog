@@ -56,7 +56,7 @@ Route::get('exception/index', 'ExceptionController@index');
 		return view('results')->with('posts', $posts)
 							  ->with('title', 'Search results : ' . request('query'))
                                ->with('settings', \App\Setting::first())
-                               ->with('categories', \App\Category::take(4)->get())
+                               ->with('categories', \App\category::take(4)->get())
                                ->with('query', request('query'));
     });
 

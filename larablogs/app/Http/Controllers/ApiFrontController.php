@@ -44,7 +44,7 @@ class ApiFrontController extends Controller
     }
 
     public function showcategory(){
-        $db = Category::all();
+        $db = category::all();
 
         return response()->json($db);
     }

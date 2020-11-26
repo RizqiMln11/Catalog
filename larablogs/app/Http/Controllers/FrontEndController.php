@@ -26,9 +26,9 @@ class FrontEndController extends Controller
         $post = Post::all();
         $setting = Setting::all();
         $limit = Post::orderBy('created_at', 'desc')->first();
-        $full = Category::orderBy('created_at', 'asc')->take(3)->get();
-        // $catAll = Category::orderBy('created_at', 'asc')->take(10)->get();
-        $catAll = Category::all();
+        $full = category::orderBy('created_at', 'asc')->take(3)->get();
+        // $catAll = category::orderBy('created_at', 'asc')->take(10)->get();
+        $catAll = category::all();
         $pst = Post::orderBy('created_at', 'desc')->take(5)->get();
         $sixthpost = Post::orderBy('created_at', 'desc')->take(10)->get();
         $pstEditorPick = Post::inRandomOrder()->take(2)->get();
@@ -40,7 +40,7 @@ class FrontEndController extends Controller
                     ->with('profile', Profile::first())
                     ->with('setting', Setting::first())
                     ->with('title', Setting::first()->site_name)
-                    ->with('categories', Category::take(4)->get()
+                    ->with('categories', category::take(4)->get()
                     );
     }
 
@@ -61,7 +61,7 @@ class FrontEndController extends Controller
 
         $profile = Profile::all();
         $postPluck = Post::where('id', '!=', $post->id)->take(5)->get();
-        $catAll = Category::orderBy('created_at', 'asc')->take(10)->get();
+        $catAll = category::orderBy('created_at', 'asc')->take(10)->get();
         $next_id = Post::where('id', '>', $post->id)->min('id');
         $prev_id = Post::where('id', '<', $post->id)->max('id');
 
@@ -73,7 +73,7 @@ class FrontEndController extends Controller
                     ->with('profile', Profile::first())
                     ->with('title', $post->title)
                     ->with('setting', Setting::first())
-                    ->with('categories', Category::take(4)->get())
+                    ->with('categories', category::take(4)->get())
                     ->with('next', Post::find($next_id))
                     ->with('prev', Post::find($prev_id))
                     ->with('tags', Tag::all()
@@ -83,8 +83,8 @@ class FrontEndController extends Controller
 
     public function category($id)
     {
-        $catAll = Category::orderBy('created_at', 'asc')->take(10)->get();
-        $category = Category::find($id);
+        $catAll = category::orderBy('created_at', 'asc')->take(10)->get();
+        $category = category::find($id);
         $profile = Profile::all();
         $sixthpost = Post::orderBy('created_at', 'desc')->take(5)->get();
         $newpstPrice = new PostPrice;
@@ -94,13 +94,13 @@ class FrontEndController extends Controller
                                ->with('title', $category->name)
                                 ->with('profile', Profile::first())
                                ->with('setting', Setting::first())
-                               ->with('categories', Category::take(4)->get());
+                               ->with('categories', category::take(4)->get());
     }
 
 
     public function tag($id)
     {
-        $catAll = Category::orderBy('created_at', 'asc')->take(10)->get();
+        $catAll = category::orderBy('created_at', 'asc')->take(10)->get();
         $tag = Tag::find($id);
         $newpstPrice = new PostPrice;
         $newprices = new price;
@@ -111,7 +111,7 @@ class FrontEndController extends Controller
                                ->with('title', $tag->tag)
                                ->with('profile', Profile::first())
                                ->with('setting', Setting::first())
-                               ->with('categories', Category::take(4)->get());
+                               ->with('categories', category::take(4)->get());
     }
 
 
@@ -120,14 +120,14 @@ class FrontEndController extends Controller
         $setting = Setting::all();
         $profile = Profile::all();
         $sixthpost = Post::orderBy('created_at', 'desc')->take(5)->get();
-        $catAll = Category::orderBy('created_at', 'asc')->take(10)->get();
+        $catAll = category::orderBy('created_at', 'asc')->take(10)->get();
         $pst = Post::orderBy('created_at', 'desc')->take(5)->get();
 
              return view('contact2', compact($sixthpost, 'sixthpost',$catAll,'catAll',$pst, 'pst'))
                                     ->with('settings', Setting::first())
                                     ->with('setting', Setting::first())
                                    ->with('profile', Profile::first())
-                                   ->with('categories', Category::take(4)->get());
+                                   ->with('categories', category::take(4)->get());
     }
     public function profile()
     {
@@ -135,7 +135,7 @@ class FrontEndController extends Controller
         $sixthpost = Post::orderBy('created_at', 'desc')->take(5)->get();
 
                return view('about', compact($sixthpost, 'sixthpost'))->with('profile', Profile::first())
-                                   ->with('categories', Category::take(4)->get());
+                                   ->with('categories', category::take(4)->get());
     }
 
     /**
@@ -146,7 +146,7 @@ class FrontEndController extends Controller
     public function services()
     {
         $setting = Setting::first();
-        $catAll = Category::orderBy('created_at', 'asc')->take(10)->get();
+        $catAll = category::orderBy('created_at', 'asc')->take(10)->get();
         $pstHomePage = Post::orderBy('created_at', 'desc')->take(4)->get();
         $pstPrice = new PostPrice;
         $prices = new price;
