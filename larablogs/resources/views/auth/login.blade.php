@@ -63,7 +63,7 @@
 
                                 <div class="row mt-3">
                                     <div class="col-12 text-center">
-                                        <p class="text-muted mb-0">Don't have an account? <a href="/contact" class="text-dark ml-1"><b>Contact Us</b></a></p>
+                                        <p class="text-muted mb-0">Don't have an account? <a href="{{route('contact')}}" class="text-dark ml-1"><b>Contact Us</b></a></p>
                                     </div> <!-- end col -->
                                 </div>
                                 <!-- end row -->

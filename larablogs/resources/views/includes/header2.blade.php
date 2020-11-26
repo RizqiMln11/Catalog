@@ -165,7 +165,7 @@
                     </ul>
                 </li>
                 <li class="nav-item @if($_SERVER['REQUEST_URI'] == '/contact') active @endif">
-                    <a class="nav-link" href="/contact">Contact</a>
+                    <a class="nav-link" href="{{route('contact')}}">Contact</a>
                 </li>
             </ul>
 

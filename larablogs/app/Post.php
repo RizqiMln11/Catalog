@@ -8,6 +8,7 @@ use Illuminate\Database\Eloquent\softDeletes;
 
 class Post extends Model
 {
+    use softDeletes;
 	protected $table = 'posts';
     protected $fillable = ['title', 'content', 'category_id', 'featured', 'slug', 'user_id'];
 
