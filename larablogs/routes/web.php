@@ -102,20 +102,20 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function(){
 	]);
 
 	Route::get('/price/edit/{id}', [
-		'uses' => 'postController@editprice',
+		'uses' => 'PostController@editprice',
 	
 		'as' => 'price.edit'
 		]);	
 
 		
 	Route::post('/price/update/{id}', [
-		'uses' => 'postController@updateprice',
+		'uses' => 'PostController@updateprice',
 	
 		'as' => 'price.update'
 		]);
 
 	Route::get('/price/delete/{id}', [
-		'uses' => 'postController@destroyprice',
+		'uses' => 'PostController@destroyprice',
 
 		'as' => 'price.delete'
 		]);
@@ -161,7 +161,7 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function(){
 	]);
 
 	Route::get('/posts', [
-	'uses' => 'postController@index',
+	'uses' => 'PostController@index',
 
 	'as' => 'posts'
      ]);
@@ -173,63 +173,63 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function(){
 	]);	
 
 	Route::get('/posts/trashed', [
-	'uses' => 'postController@trashed',
+	'uses' => 'PostController@trashed',
 
 	'as' => 'posts.trashed'
      ]);
 
 	Route::get('/posts/kill{id}', [
-	'uses' => 'postController@kill',
+	'uses' => 'PostController@kill',
 
 	'as' => 'post.kill'
      ]);
 
 	Route::get('/posts/restore{id}', [
-	'uses' => 'postController@restore',
+	'uses' => 'PostController@restore',
 
 	'as' => 'post.restore'
      ]);
 
 	Route::get('/posts/edit{id}', [
-	'uses' => 'postController@edit',
+	'uses' => 'PostController@edit',
 
 	'as' => 'post.edit'
      ]);
 
 	Route::post('/post/update{id}', [
-	'uses' => 'postController@update',
+	'uses' => 'PostController@update',
 
 	'as' => 'post.update'
      ]);
 
 	Route::get('/tags', [
-	'uses' => 'tagController@index',
+	'uses' => 'TagController@index',
 
 	'as' => 'tags'
      ]);
 
 	Route::get('/tag/edit/{id}', [
-	'uses' => 'tagController@edit',
+	'uses' => 'TagController@edit',
 
 	'as' => 'tag.edit'
      ]);
 
 	Route::get('/tag/create/', [
-	'uses' => 'tagController@create',
+	'uses' => 'TagController@create',
 
 	'as' => 'tag.create'
      ]);
 
 
 	Route::post('/tag/store/', [
-	'uses' => 'tagController@store',
+	'uses' => 'TagController@store',
 
 	'as' => 'tag.store'
      ]);
 
 
 	Route::post('/tag/update{id}', [
-	'uses' => 'tagController@update',
+	'uses' => 'TagController@update',
 
 	'as' => 'tag.update'
      ]);
@@ -305,12 +305,12 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function(){
 });
 
 Route::get('/contact', [
-	'uses' => 'FrontendController@setting',
+	'uses' => 'FrontEndController@setting',
 
 	'as' => 'contact'
      ]);
 Route::get('/about', [
-	'uses' => 'FrontendController@profile',
+	'uses' => 'FrontEndController@profile',
 
 	'as' => 'about'
      ]);

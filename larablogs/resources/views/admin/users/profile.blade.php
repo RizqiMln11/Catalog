@@ -23,7 +23,7 @@
 						Edit Your Profile
 					</div>
 					<div class="card-body">
-						<form action=" {{ route('user.profile.update') }} " method="Post" enctype="multipart/form-data">
+						<form action="{{ route('user.profile.update') }}" method="POST" enctype="multipart/form-data">
 							{{ csrf_field() }}
 
 							<div class="form-group">

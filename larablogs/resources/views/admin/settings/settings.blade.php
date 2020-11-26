@@ -24,7 +24,7 @@
 					</div>
 
 					<div class="card-body">
-						<form action=" {{ route('settings.update') }} " method="Post">
+						<form action="{{ route('settings.update') }}" method="POST">
 							{{ csrf_field() }}
 
 							<div class="form-group">

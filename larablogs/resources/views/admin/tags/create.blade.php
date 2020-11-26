@@ -24,7 +24,7 @@
 					</div>
 
 					<div class="card-body">
-						<form action=" {{ route('tag.store') }} " method="Post">
+						<form action="{{ route('tag.store') }}" method="POST">
 							{{ csrf_field() }}
 
 							<div class="form-group">

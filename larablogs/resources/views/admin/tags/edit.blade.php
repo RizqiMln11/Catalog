@@ -24,7 +24,7 @@
 					</div>
 
 					<div class="card-body">
-						<form action=" {{ route('tag.update', ['id'=>$tag->id] ) }} " method="post">
+						<form action="{{ route('tag.update', ['id'=>$tag->id] ) }}" method="post">
 							{{ csrf_field() }}
 
 							<div class="form-group">

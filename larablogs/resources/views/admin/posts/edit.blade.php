@@ -26,7 +26,7 @@
 					</div>
 
 					<div class="card-body">
-						<form action=" {{ route('post.update', ['id'=> $post->id]) }} " method="post" enctype="multipart/form-data">
+						<form action="{{ route('post.update', ['id'=> $post->id]) }}" method="post" enctype="multipart/form-data">
 							{{ csrf_field() }}
 
 							<div class="form-group">

@@ -111,27 +111,58 @@
 							<div class="col-md-6 con-left">
 								<div class="form-group">
 									<label class="my-2">Name</label>
-									<input class="form-control" type="text" name="Name" placeholder="" required="">
+									<input class="form-control" id="name" type="text" name="Name" placeholder="" required="">
 								</div>
 								<div class="form-group">
 									<label>Email</label>
-									<input class="form-control" type="email" name="Email" placeholder="" required="">
+									<input class="form-control" id="email" type="email" name="Email" placeholder="" required="">
 								</div>
 								<div class="form-group">
 									<label class="my-2">Subject</label>
-									<input class="form-control" type="text" name="Subject" placeholder="" required="">
+									<input class="form-control" id="subject" type="text" name="Subject" placeholder="" required="">
 								</div>
+								<input class="form-control" id="nomor" type="text" name="Subject" value="{{$setting->contact_number}}" required="" hidden>
 							</div>
 							<div class="col-md-6 con-right">
 								<div class="form-group">
 									<label>Message</label>
 									<textarea id="textarea" placeholder="" required=""></textarea>
 								</div>
-								<input class="form-control" type="submit" value="Submit">
+								<input class="form-control" id="order_wa" value="Submit">
 
 							</div>
 						</div>
 					</form>
+					<script>
+						$(document).ready(function () {
+							$("#order_wa").click(function (e) { 
+								var number = $('#nomor').val();
+								var pesanan = "Nama: " + $("#name").val();
+								var pesanan = "Email: " + $("#email").val();
+								var pesanan2 = "\nSubject: " + $('#subject').val();
+								var pesanan3 = "\nMessage " + $('#message').val();
+								var message = pesanan + pesanan2 + pesanan3 + pesanan4;
+								// number.replaceAt(0, '')
+								number = number.replace('+','');
+								var ini = 'https://api.whatsapp.com/send?phone=' 
+										+ number 
+										+ '&text=' 
+										+ encodeURIComponent(message)
+								window.open(ini, '_blank')
+							});
+
+
+							$(".button-log a").click(function () {
+								$(".overlay-login").fadeToggle(200);
+								$(this).toggleClass('btn-open').toggleClass('btn-close');
+							});
+						});
+						$('.overlay-close1').on('click', function () {
+							$(".overlay-login").fadeToggle(200);
+							$(".button-log a").toggleClass('btn-open').toggleClass('btn-close');
+							open = false;
+						});
+					</script>
 				</div>
 			</div>
 		</div>
