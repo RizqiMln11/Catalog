@@ -106,7 +106,7 @@
 					</div>
 				</div>
 				<div class="contact_grid_right">
-					<form action="#" method="post">
+					<!-- <form action="#" method="post"> -->
 						<div class="row contact_left_grid">
 							<div class="col-md-6 con-left">
 								<div class="form-group">
@@ -128,41 +128,11 @@
 									<label>Message</label>
 									<textarea id="textarea" placeholder="" required=""></textarea>
 								</div>
-								<input class="form-control" id="order_wa" value="Submit">
+								<button class="form-control" id="contactWa">Submit</button>
 
 							</div>
 						</div>
-					</form>
-					<script>
-						$(document).ready(function () {
-							$("#order_wa").click(function (e) { 
-								var number = $('#nomor').val();
-								var pesanan = "Nama: " + $("#name").val();
-								var pesanan = "Email: " + $("#email").val();
-								var pesanan2 = "\nSubject: " + $('#subject').val();
-								var pesanan3 = "\nMessage " + $('#message').val();
-								var message = pesanan + pesanan2 + pesanan3 + pesanan4;
-								// number.replaceAt(0, '')
-								number = number.replace('+','');
-								var ini = 'https://api.whatsapp.com/send?phone=' 
-										+ number 
-										+ '&text=' 
-										+ encodeURIComponent(message)
-								window.open(ini, '_blank')
-							});
-
-
-							$(".button-log a").click(function () {
-								$(".overlay-login").fadeToggle(200);
-								$(this).toggleClass('btn-open').toggleClass('btn-close');
-							});
-						});
-						$('.overlay-close1').on('click', function () {
-							$(".overlay-login").fadeToggle(200);
-							$(".button-log a").toggleClass('btn-open').toggleClass('btn-close');
-							open = false;
-						});
-					</script>
+					<!-- </form> -->
 				</div>
 			</div>
 		</div>
@@ -185,6 +155,35 @@
 	<script src="newcatalog/js/classie-search.js"></script>
 	<script src="newcatalog/js/demo1-search.js"></script>
 	<!--//search jQuery-->
+	
+	<script>
+		$(document).ready(function () {
+			$("#contactWa").click(function (e) { 
+				var number = $('#nomor').val();
+				var nama = "Nama: " + $("#name").val();
+				var email = "\nEmail: " + $("#email").val();
+				var subject = "\nSubject: " + $('#subject').val();
+				var message = "\nMessage " + $('#message').val();
+				var messages = nama + email + subject + message;
+				// number.replaceAt(0, '')
+				number = number.replace('+','');
+				var ini = 'https://api.whatsapp.com/send?phone=' 
+						+ number 
+						+ '&text=' 
+						+ encodeURIComponent(messages)
+				window.open(ini, '_blank')
+			});
+			$(".button-log a").click(function () {
+				$(".overlay-login").fadeToggle(200);
+				$(this).toggleClass('btn-open').toggleClass('btn-close');
+			});
+		});
+		$('.overlay-close1').on('click', function () {
+			$(".overlay-login").fadeToggle(200);
+			$(".button-log a").toggleClass('btn-open').toggleClass('btn-close');
+			open = false;
+		});
+	</script>
 	<!-- cart-js -->
 	<script src="newcatalog/js/minicart.js"></script>
 	<script>
