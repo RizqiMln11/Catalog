@@ -74,7 +74,7 @@
 										<div class="product-googles-info slide-img googles">
 											<div class="men-pro-item">
 												<div class="men-thumb-item">
-													<img src="{{asset($postfive->featured)}}" class="img-fluid" style="height: 210px !important;">
+													<img src="{{asset($postfive->featured) ?? asset('newcatalog/images/logo.png')}}" class="img-fluid" style="height: 210px !important;">
 													<div class="men-cart-pro">
 														<div class="inner-men-cart-pro">
 															<a href="{{ route('post.single', ['slug' => $postfive->slug]) }}" class="link-product-add-cart">Lihat Detail</a>

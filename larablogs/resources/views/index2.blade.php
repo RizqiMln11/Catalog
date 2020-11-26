@@ -145,7 +145,7 @@
 						<div class="product-googles-info googles">
 							<div class="men-pro-item">
 								<div class="men-thumb-item">
-									<img src="{{asset($pstHomePg->featured)}}" class="img-fluid"  style="height: 210px !important;">
+									<img src="{{asset($pstHomePg->featured) ?? asset('newcatalog/images/logo.png')}}" class="img-fluid"  style="height: 210px !important;">
 									<div class="men-cart-pro">
 										<div class="inner-men-cart-pro">
 											<a href="catalog/{{$pstHomePg->slug}}" class="link-product-add-cart">Lihat Detail</a>
@@ -225,7 +225,7 @@
 										<div class="product-googles-info slide-img googles">
 											<div class="men-pro-item">
 												<div class="men-thumb-item">
-													<img src="{{asset($postfive->featured)}}" class="img-fluid" style="height: 210px !important;">
+													<img src="{{asset($postfive->featured) ?? asset('newcatalog/images/logo.png')}}" class="img-fluid" style="height: 210px !important;">
 													<div class="men-cart-pro">
 														<div class="inner-men-cart-pro">
 															<a href="catalog/{{$postfive->slug}}" class="link-product-add-cart">Quick View</a>
@@ -336,7 +336,7 @@
 					@foreach($pstEditorPick as $postPicker)
 					<div class="col-lg-6 galsses-grid-left">
 						<figure class="effect-lexi">
-							<img src="{{asset($postPicker->featured)}}" alt="" class="img-fluid">
+							<img src="{{asset($postPicker->featured) ?? asset('newcatalog/images/logo.png')}}" alt="" class="img-fluid">
 							<figcaption>
 								<h3>Editor's
 									<span>Pick</span>
