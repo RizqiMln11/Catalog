@@ -39,14 +39,17 @@
 				</div>
 				<div class="col-lg-3 footer-grid-w3ls">
 					<div class="footer-title">
-						<h3>Quick Links</h3>
+						<h3>Suport By:</h3>
 					</div>
 					<ul class="links">
 						<li>
-							<a href="{{route('index')}}">Home</a>
+							<p>~ Inkubator Bisnis PPNS</p>
+							<img src="{{asset('newcatalog/images/logo2.png')}}" style="height: 5em;background-color: darkgrey;">
 						</li>
+						<hr>
 						<li>
-							<a href="{{route('contact')}}">Contact Us</a>
+							<p>~ Kemendikbud RI</p>
+							<img src="{{asset('newcatalog/images/kemendikbud.png')}}" style="height: 5em;">
 						</li>
 					</ul>
 				</div>
@@ -55,7 +58,7 @@
 						<h3>Subscribe for your offers</h3>
 					</div>
 					<div class="footer-text">
-						<p>By subscribing to our mailing list you will always get latest news and updates from us.</p>
+						<p>Masukan Email anda, Masih banyak Catalog menarik lainnya! Ikuti kami dengan subscribe Email di bawah ini!</p>
 						<form action="{{ url('subscribe') }}" method="POST">
 							{{ csrf_field() }}
 							<input class="form-control" type="email" name="Email" placeholder="Enter your email..." required="">
@@ -68,7 +71,7 @@
 				</div>
 			</div>
 			<div class="copyright-w3layouts mt-4">
-				<p class="copy-right text-center ">&copy; <a href="/">2018 {{$setting->site_name}}</a>. All Rights Reserved
+				<p class="copy-right text-center ">&copy; <a href="/">2020 {{$setting->site_name}}</a>. All Rights Reserved
 					<!-- Developer Company -->
 					<a href="https://bikinkode.com/" style="display:none;"> Develop By: Bikin Kode Indonesia </a>
 					<a href="https://intprism.com/" style="display:none;"> Develop By: Intprism Technology </a>

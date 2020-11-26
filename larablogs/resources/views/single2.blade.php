@@ -123,6 +123,7 @@
 											<div class="googles single-item singlepage">
 														<input type="hidden" id="barang" name="barang" value="{{ $post->title }}">
 														<input type="hidden" id="category" name="category" value="{{$post->category->name}}">
+														<input type="hidden" id="nomor" name="nomor" value="{{$setting->contact_number}}">
 														<button id="order_wa" class="googles-cart pgoogles-cart">
 															<span class="fab fa-whatsaap"></span>&nbsp;Pesan Via Whatsapp
 														</button>
@@ -314,16 +315,15 @@
 		<!-- //cart-js -->
 		<script>
 			$(document).ready(function () {
-                
-                var number = '6283112232212';
                 $("#order_wa").click(function (e) { 
+					var number = $('#nomor').val();
                     var pesanan = "saya ingin memesan " + $("#barang").val();
                     var pesanan2 = " bercategory " + $('#category').val();
                     var pesanan3 = " dengan jumlah " + $('#jml').val();
                     var pesanan4 = " dengan Pesan Tambahan : " + $('#pesan').val();
-                    e.preventDefault();
                     var message = pesanan + pesanan2 + pesanan3 + pesanan4;
-                    
+                    // number.replaceAt(0, '')
+					number = number.replace('+','');
                     var ini = 'https://api.whatsapp.com/send?phone=' 
                             + number 
                             + '&text=' 
